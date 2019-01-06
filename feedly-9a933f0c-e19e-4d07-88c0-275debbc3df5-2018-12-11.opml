@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Ynjxsjmh subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="指导" title="指导">
+            <outline type="rss" text="战隼的学习探索" title="战隼的学习探索" xmlUrl="http://feed.read.org.cn/" htmlUrl="http://www.read.org.cn"/>
+            <outline type="rss" text="战隼的学习探索 [expanded by feedex.net]" title="战隼的学习探索 [expanded by feedex.net]" xmlUrl="http://feedex.net/feed/feed.read.org.cn/" htmlUrl="http://www.read.org.cn"/>
+        </outline>
+        <outline text="知乎" title="知乎">
+            <outline type="rss" text="知乎每日精选" title="知乎每日精选" xmlUrl="http://www.zhihu.com/rss" htmlUrl="http://www.zhihu.com"/>
+        </outline>
+        <outline text="知名博客" title="知名博客">
+            <outline type="rss" text="阮一峰的网络日志" title="阮一峰的网络日志" xmlUrl="http://feeds.feedburner.com/ruanyifeng" htmlUrl="http://www.ruanyifeng.com/blog/"/>
+            <outline type="rss" text="月光博客" title="月光博客" xmlUrl="http://feed.williamlong.info/" htmlUrl="https://www.williamlong.info/"/>
+            <outline type="rss" text="编程随想的博客" title="编程随想的博客" xmlUrl="http://feeds2.feedburner.com/programthink" htmlUrl="https://program-think.blogspot.com/"/>
+        </outline>
+    </body>
+</opml>

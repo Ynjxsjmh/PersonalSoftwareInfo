@@ -1,0 +1,73 @@
+* 配置 init file
+#+BEGIN_SRC elisp
+(org-babel-do-load-languages
+      'org-babel-load-languages
+      '((emacs-lisp . t)
+        (C . t)
+        (java . t)
+        (ruby . t)
+        (ditaa . t)
+        (python . t)
+        (shell . t)
+        (latex . t)
+        (plantuml . t)
+        (R . t)))
+#+END_SRC
+
+将上述代码添加到 init file 中
+
+* 添加 语言名称
+ 在第一行后面添加语言名称。支持的语言名称以及语言标识符参考 [[https://orgmode.org/worg/org-contrib/babel/languages.html][Babel:Languages]]。(使用 =C-c C-l= 插入链接)
+
+可以使用在 src 区域使用  =C-c '= 弹出一个代码编辑区。
+最后使用 =C-c C-c= 运行代码。
+** C 例子
+注意 C 语言的字母是大写的
+#+BEGIN_SRC C
+#include <stdio.h>
+
+int main() {
+  int a[5] = {1,2,3,4,5};
+  printf("%x, %x\n", &a, &a[0]);
+  printf("%x, %x", (&a+1), (&a[0]+1));
+  return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+| ffffcb80 | ffffcb80 |
+| ffffcb94 | ffffcb84 |
+
+** Java 例子
+参考 [[https://stackoverflow.com/questions/41517257/execute-java-code-block-in-org-mode][sof]]
+#+HEADERS: :classname Test
+#+BEGIN_SRC java
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("Hello Org-babel");
+    }
+}
+#+END_SRC
+
+#+RESULTS:
+: Hello Org-babel
+
+** Python 例子
+#+BEGIN_SRC python :results output
+print("Hello python!")
+#+END_SRC
+
+#+RESULTS:
+: Hello python!
+
+需要注意的是得加上 =:results output= 并且 =:= 前有个空格，否则会输出 none。
+原因可以参考[[https://emacs-china.org/t/org-mode-python/208][Emacs China]] [[https://emacs.stackexchange.com/questions/17926/python-org-mode-source-block-output-is-always-none][stackchange]] [[https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html][orgmode.org]]
+** Javascript 例子
+这个一直运行不了，也安装了 node.js 并将其加入到了 path 中。
+#+BEGIN_SRC js
+console.log("hello world")
+#+END_SRC
+
+#+RESULTS:
+: hello world
+: undefined
