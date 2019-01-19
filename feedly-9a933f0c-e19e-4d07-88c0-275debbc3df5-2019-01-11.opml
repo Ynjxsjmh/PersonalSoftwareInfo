@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Ynjxsjmh subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="指导" title="指导">
+            <outline type="rss" text="褪墨・时间管理，个人提升，生活健康与习惯" title="褪墨・时间管理，个人提升，生活健康与习惯" xmlUrl="http://feed.mifengtd.cn/" htmlUrl="http://www.mifengtd.cn"/>
+            <outline type="rss" text="读书笔记" title="读书笔记" xmlUrl="http://feed.write.org.cn/" htmlUrl="http://www.write.org.cn"/>
+            <outline type="rss" text="战隼的学习探索" title="战隼的学习探索" xmlUrl="http://feed.read.org.cn/" htmlUrl="http://www.read.org.cn"/>
+            <outline type="rss" text="战隼的学习探索 [expanded by feedex.net]" title="战隼的学习探索 [expanded by feedex.net]" xmlUrl="http://feedex.net/feed/feed.read.org.cn/" htmlUrl="http://www.read.org.cn"/>
+        </outline>
+        <outline text="资讯" title="资讯">
+            <outline type="rss" text="知乎每日精选" title="知乎每日精选" xmlUrl="http://www.zhihu.com/rss" htmlUrl="http://www.zhihu.com"/>
+            <outline type="rss" text="V2EX-最热主题" title="V2EX-最热主题" xmlUrl="https://rsshub.app/v2ex/topics/hot" htmlUrl="https://www.v2ex.com/"/>
+            <outline type="rss" text="科学松鼠会" title="科学松鼠会" xmlUrl="http://songshuhui.net/feed" htmlUrl="http://songshuhui.net"/>
+        </outline>
+        <outline text="知名博客" title="知名博客">
+            <outline type="rss" text="叶檀的BLOG" title="叶檀的BLOG" xmlUrl="http://blog.sina.com.cn/rss/1233227211.xml" htmlUrl="http://blog.sina.com.cn/yetan"/>
+            <outline type="rss" text="Chen's blog" title="Chen's blog" xmlUrl="http://blog.binchen.org/rss.xml" htmlUrl="http://blog.binchen.org/"/>
+            <outline type="rss" text="李开复的博客" title="李开复的博客" xmlUrl="http://blog.sina.com.cn/rss/kaifulee.xml" htmlUrl="http://blog.sina.com.cn/kaifulee"/>
+            <outline type="rss" text="可能吧" title="可能吧" xmlUrl="http://feeds.kenengba.com/kenengbarss" htmlUrl="https://kenengba.com"/>
+            <outline type="rss" text="阮一峰的网络日志" title="阮一峰的网络日志" xmlUrl="http://feeds.feedburner.com/ruanyifeng" htmlUrl="http://www.ruanyifeng.com/blog/"/>
+            <outline type="rss" text="方舟子的Blog" title="方舟子的Blog" xmlUrl="http://xysblogs.org/fangzhouzi/feed/" htmlUrl="http://xysblogs.org/fangzhouzi"/>
+            <outline type="rss" text="徐贲的BLOG" title="徐贲的BLOG" xmlUrl="http://blog.sina.com.cn/rss/1286402547.xml" htmlUrl="http://blog.sina.com.cn/xubenblog"/>
+            <outline type="rss" text="马晓年的BLOG" title="马晓年的BLOG" xmlUrl="http://blog.sina.com.cn/rss/1193476841.xml" htmlUrl="http://blog.sina.com.cn/maxiaonian"/>
+            <outline type="rss" text="IT牛人博客聚合网站" title="IT牛人博客聚合网站" xmlUrl="http://www.udpwork.com/feed" htmlUrl="http://www.udpwork.com/"/>
+            <outline type="rss" text="吴万伟的博客" title="吴万伟的博客" xmlUrl="http://blog.163.com/wuwanwei@yeah/rss/" htmlUrl="http://blog.163.com/wuwanwei@yeah"/>
+            <outline type="rss" text="奔跑中的奶酪" title="奔跑中的奶酪" xmlUrl="http://www.runningcheese.com/feed" htmlUrl="https://www.runningcheese.com"/>
+            <outline type="rss" text="刘兴亮的BLOG" title="刘兴亮的BLOG" xmlUrl="http://blog.sina.com.cn/rss/liuxingliang.xml" htmlUrl="http://blog.sina.com.cn/liuxingliang"/>
+            <outline type="rss" text="Mastering Emacs" title="Mastering Emacs" xmlUrl="http://www.masteringemacs.org/feed/" htmlUrl="http://www.masteringemacs.org/feed"/>
+            <outline type="rss" text="月光博客" title="月光博客" xmlUrl="http://feed.williamlong.info/" htmlUrl="https://www.williamlong.info/"/>
+            <outline type="rss" text="编程随想的博客" title="编程随想的博客" xmlUrl="http://feeds2.feedburner.com/programthink" htmlUrl="https://program-think.blogspot.com/"/>
+            <outline type="rss" text="马未都的BLOG" title="马未都的BLOG" xmlUrl="http://blog.sina.com.cn/rss/1347712670.xml" htmlUrl="http://blog.sina.com.cn/mazhahuchuang"/>
+            <outline type="rss" text="杨恒均的博客" title="杨恒均的博客" xmlUrl="http://blog.sina.com.cn/rss/1220546491.xml" htmlUrl="http://blog.sina.com.cn/yanghengjun"/>
+        </outline>
+    </body>
+</opml>
