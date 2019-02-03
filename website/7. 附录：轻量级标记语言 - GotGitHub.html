@@ -1,0 +1,4241 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <base href="http://www.worldhello.net/gotgithub/appendix/markups.html"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen"></style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #eae7e1 !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #eae7e1;
+}
+html, body, input, textarea, select, button {
+    border-color: #424347;
+    color: #000000;
+}
+a {
+    color: #003ae6;
+}
+table {
+    border-color: #767470;
+}
+::placeholder {
+    color: #9f9b91;
+}
+::selection {
+    background-color: #0056bf;
+    color: #eae7e1;
+}
+::-moz-selection {
+    background-color: #0056bf;
+    color: #eae7e1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #f7ff91 !important;
+    color: #000000 !important;
+}
+::-webkit-scrollbar {
+    background-color: #dedbd3;
+    color: #565657;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #b5b0a6;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #9c988e;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #565657;
+}
+::-webkit-scrollbar-corner {
+    background-color: #eae7e1;
+}
+* {
+    scrollbar-color: #b5b0a6 #dedbd3;
+}</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>7. 附录：轻量级标记语言 — GotGitHub</title>
+    
+    <style data-savepage-href="../static/sphinxdoc.css" type="text/css">/*
+ * sphinxdoc.css_t
+ * ~~~~~~~~~~~~~~~
+ *
+ * Sphinx stylesheet -- sphinxdoc theme.  Originally created by
+ * Armin Ronacher for Werkzeug.
+ *
+ * :copyright: Copyright 2007-2011 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+ *
+ */
+
+/*savepage-import-url=basic.css*//*
+ * basic.css
+ * ~~~~~~~~~
+ *
+ * Sphinx stylesheet -- basic theme.
+ *
+ * :copyright: Copyright 2007-2011 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+ *
+ */
+
+/* -- main layout ----------------------------------------------------------- */
+
+div.clearer {
+    clear: both;
+}
+
+/* -- relbar ---------------------------------------------------------------- */
+
+div.related {
+    width: 100%;
+    font-size: 90%;
+}
+
+div.related h3 {
+    display: none;
+}
+
+div.related ul {
+    margin: 0;
+    padding: 0 0 0 10px;
+    list-style: none;
+}
+
+div.related li {
+    display: inline;
+}
+
+div.related li.right {
+    float: right;
+    margin-right: 5px;
+}
+
+/* -- sidebar --------------------------------------------------------------- */
+
+div.sphinxsidebarwrapper {
+    padding: 10px 5px 0 10px;
+}
+
+div.sphinxsidebar {
+    float: left;
+    width: 230px;
+    margin-left: -100%;
+    font-size: 90%;
+}
+
+div.sphinxsidebar ul {
+    list-style: none;
+}
+
+div.sphinxsidebar ul ul,
+div.sphinxsidebar ul.want-points {
+    margin-left: 20px;
+    list-style: square;
+}
+
+div.sphinxsidebar ul ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+div.sphinxsidebar form {
+    margin-top: 10px;
+}
+
+div.sphinxsidebar input {
+    border: 1px solid #98dbcc;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+div.sphinxsidebar #searchbox input[type="text"] {
+    width: 170px;
+}
+
+div.sphinxsidebar #searchbox input[type="submit"] {
+    width: 30px;
+}
+
+img {
+    border: 0;
+}
+
+/* -- search page ----------------------------------------------------------- */
+
+ul.search {
+    margin: 10px 0 0 20px;
+    padding: 0;
+}
+
+ul.search li {
+    padding: 5px 0 5px 20px;
+    background-image: /*savepage-url=file.png*/ url();
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+}
+
+ul.search li a {
+    font-weight: bold;
+}
+
+ul.search li div.context {
+    color: #888;
+    margin: 2px 0 0 30px;
+    text-align: left;
+}
+
+ul.keywordmatches li.goodmatch a {
+    font-weight: bold;
+}
+
+/* -- index page ------------------------------------------------------------ */
+
+table.contentstable {
+    width: 90%;
+}
+
+table.contentstable p.biglink {
+    line-height: 150%;
+}
+
+a.biglink {
+    font-size: 1.3em;
+}
+
+span.linkdescr {
+    font-style: italic;
+    padding-top: 5px;
+    font-size: 90%;
+}
+
+/* -- general index --------------------------------------------------------- */
+
+table.indextable {
+    width: 100%;
+}
+
+table.indextable td {
+    text-align: left;
+    vertical-align: top;
+}
+
+table.indextable dl, table.indextable dd {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+table.indextable tr.pcap {
+    height: 10px;
+}
+
+table.indextable tr.cap {
+    margin-top: 10px;
+    background-color: #f2f2f2;
+}
+
+img.toggler {
+    margin-right: 3px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+div.modindex-jumpbox {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 1em 0 1em 0;
+    padding: 0.4em;
+}
+
+div.genindex-jumpbox {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 1em 0 1em 0;
+    padding: 0.4em;
+}
+
+/* -- general body styles --------------------------------------------------- */
+
+a.headerlink {
+    visibility: hidden;
+}
+
+h1:hover > a.headerlink,
+h2:hover > a.headerlink,
+h3:hover > a.headerlink,
+h4:hover > a.headerlink,
+h5:hover > a.headerlink,
+h6:hover > a.headerlink,
+dt:hover > a.headerlink {
+    visibility: visible;
+}
+
+div.body p.caption {
+    text-align: inherit;
+}
+
+div.body td {
+    text-align: left;
+}
+
+.field-list ul {
+    padding-left: 1em;
+}
+
+.first {
+    margin-top: 0 !important;
+}
+
+p.rubric {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+img.align-left, .figure.align-left, object.align-left {
+    clear: left;
+    float: left;
+    margin-right: 1em;
+}
+
+img.align-right, .figure.align-right, object.align-right {
+    clear: right;
+    float: right;
+    margin-left: 1em;
+}
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* -- sidebars -------------------------------------------------------------- */
+
+div.sidebar {
+    margin: 0 0 0.5em 1em;
+    border: 1px solid #ddb;
+    padding: 7px 7px 0 7px;
+    background-color: #ffe;
+    width: 40%;
+    float: right;
+}
+
+p.sidebar-title {
+    font-weight: bold;
+}
+
+/* -- topics ---------------------------------------------------------------- */
+
+div.topic {
+    border: 1px solid #ccc;
+    padding: 7px 7px 0 7px;
+    margin: 10px 0 10px 0;
+}
+
+p.topic-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* -- admonitions ----------------------------------------------------------- */
+
+div.admonition {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+div.admonition dt {
+    font-weight: bold;
+}
+
+div.admonition dl {
+    margin-bottom: 0;
+}
+
+p.admonition-title {
+    margin: 0px 10px 5px 0px;
+    font-weight: bold;
+}
+
+div.body p.centered {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* -- tables ---------------------------------------------------------------- */
+
+table.docutils {
+    border: 0;
+    border-collapse: collapse;
+}
+
+table.docutils td, table.docutils th {
+    padding: 1px 8px 1px 5px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #aaa;
+}
+
+table.field-list td, table.field-list th {
+    border: 0 !important;
+}
+
+table.footnote td, table.footnote th {
+    border: 0 !important;
+}
+
+th {
+    text-align: left;
+    padding-right: 5px;
+}
+
+table.citation {
+    border-left: solid 1px gray;
+    margin-left: 1px;
+}
+
+table.citation td {
+    border-bottom: none;
+}
+
+/* -- other body styles ----------------------------------------------------- */
+
+ol.arabic {
+    list-style: decimal;
+}
+
+ol.loweralpha {
+    list-style: lower-alpha;
+}
+
+ol.upperalpha {
+    list-style: upper-alpha;
+}
+
+ol.lowerroman {
+    list-style: lower-roman;
+}
+
+ol.upperroman {
+    list-style: upper-roman;
+}
+
+dl {
+    margin-bottom: 15px;
+}
+
+dd p {
+    margin-top: 0px;
+}
+
+dd ul, dd table {
+    margin-bottom: 10px;
+}
+
+dd {
+    margin-top: 3px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+dt:target, .highlighted {
+    background-color: #fbe54e;
+}
+
+dl.glossary dt {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.field-list ul {
+    margin: 0;
+    padding-left: 1em;
+}
+
+.field-list p {
+    margin: 0;
+}
+
+.refcount {
+    color: #060;
+}
+
+.optional {
+    font-size: 1.3em;
+}
+
+.versionmodified {
+    font-style: italic;
+}
+
+.system-message {
+    background-color: #fda;
+    padding: 5px;
+    border: 3px solid red;
+}
+
+.footnote:target  {
+    background-color: #ffa;
+}
+
+.line-block {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.line-block .line-block {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1.5em;
+}
+
+.guilabel, .menuselection {
+    font-family: sans-serif;
+}
+
+.accelerator {
+    text-decoration: underline;
+}
+
+.classifier {
+    font-style: oblique;
+}
+
+abbr, acronym {
+    border-bottom: dotted 1px;
+    cursor: help;
+}
+
+/* -- code displays --------------------------------------------------------- */
+
+pre {
+    overflow: auto;
+    overflow-y: hidden;  /* fixes display issues on Chrome browsers */
+}
+
+td.linenos pre {
+    padding: 5px 0px;
+    border: 0;
+    background-color: transparent;
+    color: #aaa;
+}
+
+table.highlighttable {
+    margin-left: 0.5em;
+}
+
+table.highlighttable td {
+    padding: 0 0.5em 0 0.5em;
+}
+
+tt.descname {
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+tt.descclassname {
+    background-color: transparent;
+}
+
+tt.xref, a tt {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+h1 tt, h2 tt, h3 tt, h4 tt, h5 tt, h6 tt {
+    background-color: transparent;
+}
+
+.viewcode-link {
+    float: right;
+}
+
+.viewcode-back {
+    float: right;
+    font-family: sans-serif;
+}
+
+div.viewcode-block:target {
+    margin: -1px -10px;
+    padding: 0 10px;
+}
+
+/* -- math display ---------------------------------------------------------- */
+
+img.math {
+    vertical-align: middle;
+}
+
+div.body div.math p {
+    text-align: center;
+}
+
+span.eqno {
+    float: right;
+}
+
+/* -- printout stylesheet --------------------------------------------------- */
+
+@media print {
+    div.document,
+    div.documentwrapper,
+    div.bodywrapper {
+        margin: 0 !important;
+        width: 100%;
+    }
+
+    div.sphinxsidebar,
+    div.related,
+    div.footer,
+    #top-link {
+        display: none;
+    }
+}
+
+/* -- page layout ----------------------------------------------------------- */
+
+body {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva',
+                 'Verdana', sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    line-height: 150%;
+    text-align: center;
+    background-color: #BFD1D4;
+    color: black;
+    padding: 0;
+    border: 1px solid #aaa;
+
+    margin: 0px 80px 0px 80px;
+    min-width: 740px;
+}
+
+div.document {
+    background-color: white;
+    text-align: left;
+    background-image: /*savepage-url=contents.png*/ url();
+    background-repeat: repeat-x;
+}
+
+div.bodywrapper {
+    margin: 0 240px 0 0;
+    border-right: 1px solid #ccc;
+}
+
+div.body {
+    margin: 0;
+    padding: 0.5em 20px 20px 20px;
+}
+
+div.related {
+    font-size: 1em;
+}
+
+div.related ul {
+    background-image: /*savepage-url=navigation.png*/ url();
+    height: 2em;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+div.related ul li {
+    margin: 0;
+    padding: 0;
+    height: 2em;
+    float: left;
+}
+
+div.related ul li.right {
+    float: right;
+    margin-right: 5px;
+}
+
+div.related ul li a {
+    margin: 0;
+    padding: 0 5px 0 5px;
+    line-height: 1.75em;
+    color: #EE9816;
+}
+
+div.related ul li a:hover {
+    color: #3CA8E7;
+}
+
+div.sphinxsidebarwrapper {
+    padding: 0;
+}
+
+div.sphinxsidebar {
+    margin: 0;
+    padding: 0.5em 15px 15px 0;
+    width: 210px;
+    float: right;
+    font-size: 1em;
+    text-align: left;
+}
+
+div.sphinxsidebar h3, div.sphinxsidebar h4 {
+    margin: 1em 0 0.5em 0;
+    font-size: 1em;
+    padding: 0.1em 0 0.1em 0.5em;
+    color: white;
+    border: 1px solid #86989B;
+    background-color: #AFC1C4;
+}
+
+div.sphinxsidebar h3 a {
+    color: white;
+}
+
+div.sphinxsidebar ul {
+    padding-left: 1.5em;
+    margin-top: 7px;
+    padding: 0;
+    line-height: 130%;
+}
+
+div.sphinxsidebar ul ul {
+    margin-left: 20px;
+}
+
+div.footer {
+    background-color: #E3EFF1;
+    color: #86989B;
+    padding: 3px 8px 3px 0;
+    clear: both;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+div.footer a {
+    color: #86989B;
+    text-decoration: underline;
+}
+
+/* -- body styles ----------------------------------------------------------- */
+
+p {    
+    margin: 0.8em 0 0.5em 0;
+}
+
+a {
+    color: #CA7900;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2491CF;
+}
+
+div.body a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+h1 {
+    margin: 0;
+    padding: 0.7em 0 0.3em 0;
+    font-size: 1.5em;
+    color: #11557C;
+}
+
+h2 {
+    margin: 1.3em 0 0.2em 0;
+    font-size: 1.35em;
+    padding: 0;
+}
+
+h3 {
+    margin: 1em 0 -0.3em 0;
+    font-size: 1.2em;
+}
+
+div.body h1 a, div.body h2 a, div.body h3 a, div.body h4 a, div.body h5 a, div.body h6 a {
+    color: black!important;
+}
+
+h1 a.anchor, h2 a.anchor, h3 a.anchor, h4 a.anchor, h5 a.anchor, h6 a.anchor {
+    display: none;
+    margin: 0 0 0 0.3em;
+    padding: 0 0.2em 0 0.2em;
+    color: #aaa!important;
+}
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor,
+h5:hover a.anchor, h6:hover a.anchor {
+    display: inline;
+}
+
+h1 a.anchor:hover, h2 a.anchor:hover, h3 a.anchor:hover, h4 a.anchor:hover,
+h5 a.anchor:hover, h6 a.anchor:hover {
+    color: #777;
+    background-color: #eee;
+}
+
+a.headerlink {
+    color: #c60f0f!important;
+    font-size: 1em;
+    margin-left: 6px;
+    padding: 0 4px 0 4px;
+    text-decoration: none!important;
+}
+
+a.headerlink:hover {
+    background-color: #ccc;
+    color: white!important;
+}
+
+cite, code, tt {
+    font-family: 'Consolas', 'Deja Vu Sans Mono',
+                 'Bitstream Vera Sans Mono', monospace;
+    font-size: 0.95em;
+    letter-spacing: 0.01em;
+}
+
+tt {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+tt.descname, tt.descclassname, tt.xref {
+    border: 0;
+}
+
+hr {
+    border: 1px solid #abc;
+    margin: 2em;
+}
+
+a tt {
+    border: 0;
+    color: #CA7900;
+}
+
+a tt:hover {
+    color: #2491CF;
+}
+
+pre {
+    font-family: 'Consolas', 'Deja Vu Sans Mono',
+                 'Bitstream Vera Sans Mono', monospace;
+    font-size: 0.95em;
+    letter-spacing: 0.015em;
+    line-height: 120%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+td pre {
+    font-family: 'Consolas', 'Deja Vu Sans Mono',
+                 'Bitstream Vera Sans Mono', monospace;
+    font-size: 1em;
+    letter-spacing: 0.015em;
+    line-height: 120%;
+    padding: 0em;
+    border: 0;
+    background-color: #ffffff;
+}
+
+pre a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+td.linenos pre {
+    padding: 0.5em 0;
+}
+
+div.quotebar {
+    background-color: #f8f8f8;
+    max-width: 250px;
+    float: right;
+    padding: 2px 7px;
+    border: 1px solid #ccc;
+}
+
+div.topic {
+    background-color: #f8f8f8;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 -0.5em 0 -0.5em;
+}
+
+table td, table th {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+div.admonition, div.warning {
+    font-size: 0.9em;
+    margin: 1em 0 1em 0;
+    border: 1px solid #86989B;
+    background-color: #f7f7f7;
+    padding: 0;
+}
+
+div.admonition p, div.warning p {
+    margin: 0.5em 1em 0.5em 1em;
+    padding: 0;
+}
+
+div.admonition pre, div.warning pre {
+    margin: 0.4em 1em 0.4em 1em;
+}
+
+div.admonition p.admonition-title,
+div.warning p.admonition-title {
+    margin: 0;
+    padding: 0.1em 0 0.1em 0.5em;
+    color: white;
+    border-bottom: 1px solid #86989B;
+    font-weight: bold;
+    background-color: #AFC1C4;
+}
+
+div.warning {
+    border: 1px solid #940000;
+}
+
+div.warning p.admonition-title {
+    background-color: #CF0000;
+    border-bottom-color: #940000;
+}
+
+div.admonition ul, div.admonition ol,
+div.warning ul, div.warning ol {
+    margin: 0.1em 0.5em 0.5em 3em;
+    padding: 0;
+}
+
+div.versioninfo {
+    margin: 1em 0 0 0;
+    border: 1px solid #ccc;
+    background-color: #DDEAF0;
+    padding: 8px;
+    line-height: 1.3em;
+    font-size: 0.9em;
+}
+
+.viewcode-back {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva',
+                 'Verdana', sans-serif;
+}
+
+div.viewcode-block:target {
+    background-color: #f4debf;
+    border-top: 1px solid #ac9;
+    border-bottom: 1px solid #ac9;
+}
+
+div.figure {
+    text-align: center;
+    margin: 1.5em 0 1.5em 0;
+}
+
+div.figure p.caption {
+    font-size: 0.9em;
+}
+
+div.figure img {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.footnote-reference {
+    font-size: smaller;
+    line-height: 0;
+    vertical-align: super;
+    margin: 0;
+    font-weight: normal;
+}
+
+div.body a.footnote-reference {
+    text-decoration: none;
+}
+
+table.classic {
+    border: 2px solid black;
+    border-collapse: collapse;
+    background: white;
+}
+
+table.classic td, table.docutils th {
+    padding: 1px 8px 1px 5px;
+    border: 1px solid black;
+}
+
+table.classic th {
+    background: #aaa;
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
+}
+</style><style data-savepage-disabled="" class="darkreader darkreader--cors" media="screen"></style><style class="darkreader darkreader--sync" media="screen"></style>
+    <style data-savepage-href="../static/pygments.css" type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #eeffcc; }
+.highlight .c { color: #408090; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #408090; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #408090; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408090; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #303030 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #208050 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #208050 } /* Literal.Number.Float */
+.highlight .mh { color: #208050 } /* Literal.Number.Hex */
+.highlight .mi { color: #208050 } /* Literal.Number.Integer */
+.highlight .mo { color: #208050 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #208050 } /* Literal.Number.Integer.Long */</style><style data-savepage-disabled="" class="darkreader darkreader--cors" media="screen"></style><style class="darkreader darkreader--sync" media="screen"></style>
+    <style data-savepage-href="/stylesheets/master.css" type="text/css">body {
+  font-family: Rockwell, Verdana, sans-serif;
+  letter-spacing: 0em;
+  background: #fff /*savepage-url=/images/header_bg.gif*/ url() repeat-x top;
+  color: #353B40;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+a {
+  color: #583;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #260;
+}
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  -moz-border-radius: 1.5em;
+  -webkit-border-radius: 1.5em;
+  border-radius: 1.5em;
+}
+
+#header {
+  height: 140px;
+}
+#header h1 {
+  float: left;
+}
+
+#header h1 a {  
+  margin-top: 10px;
+  display: block;
+  background: /*savepage-url=/images/title.gif*/ url(data:image/gif;base64,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) no-repeat top left;
+  width: 405px;
+  height: 80px;
+  text-indent: -999em;
+}
+
+#menu {
+  float: right;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  margin-top: 25px;
+}
+
+#menu ul li {
+  display: block;
+  float: left;
+  margin-left: 10px;
+}
+
+#menu ul li a {
+  display: block;
+  background: /*savepage-url=/images/blog.gif*/ url(data:image/gif;base64,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) no-repeat top left;
+  width: 69px;
+  height: 94px;
+  text-indent: -999em;
+}
+
+#menu ul li a#twitter-link { background-image: /*savepage-url=/images/twitter.gif*/ url(); }
+#menu ul li a#blog-link { background-image: /*savepage-url=/images/blog.gif*/ url(data:image/gif;base64,R0lGODlhRQBeAPf/ANbX162ur6urrKeoqKmpqp2fn1NUVlxeX4KEhbq6urm5un5+gHh5e2BiY3Z4eVhZW11eYGxub1JTVVRUVlpbXWJkZcXFxbm6u4CAgVdYWn19f6qqq6ioqVFSVKKipJWXl1RVV2ZoaZOTlIqLjIaGiH1+f25wcUZHSF5gYVpcXVhaW05PUdPT0/X19Xp6emBhY21ucGVmaGdoaqampt7e3l5fYXBxc2RlZ29wcmhqbG5vcW9vb2tsbmxtb2lrbXN1d3J0dl9gYmZnaWNkZrKysmFjZenp6WJjZXV2eGFiZHR1d4WFhVtcXmttb3FzdcjIyGNjY2psbm5wcnBydHR2eFlaXJCQkF5gYmhpa2dpa2prbXZ4emhqa29xc/T09H+Bg2ttbnh6fHx+gG1vcYWGh9XW1nJzdXt9f36Agn1/gVxdXr29vV5eYNXV1Zubm1VWWNPU1K2trnl6enFydGBiZGZoanBwcmNlZ2lqbODg4FZXWVxdX7+/wFhYWN/g4Hl7fXp8fqmqq2RlZnd3ePb29mxucKusrdfY2GVnaWVnaN/f3/X19qSlpnZ3eZeYmejo6FtdX2JkZurq6mlrbHd5e7KztOvs7E1NTXN0dri4uaytrXd5enFzdG1vcGFjZL6+v5aWl3+AgfT19Xl7fF5fYOvr63d4eqCgoXt9fnJ0dcnJynR1dqytrkxNT6mqqnV3eVdYWXp7fYSEhlBRU3Byc56goNTU1YmKi09QUm9xcs/P0MDBwcPDxKKjpIeJiXZ3d9PT1Gdpare3uOvr7Le4uF9hYtLS04+RkmRmaODg4V9fYXV2d9zd3YSFh3t8fdXV1mVmZ2NlZpaXmV9hY+rq6+rr64CChNTU1LS0tcnKytTV1Xl6fK6ur6GhomBhYoyNj2tsbcnJycfHyKanp7GxspSVlnt7fWhoamhpamlpa2lpapmam1pcXtfX12JiZGJjZISGhoWGhry8vVJSU0xOT4iJioqKi25vcGJiY2xtbnp6fHJydISFhnh6e1BSU////yH5BAEAAP8ALAAAAABFAF4AAAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqvFiK16FSKy22SzRpkoxvrnQRignxkBZaP6gITZWrmbydPBceAgNkU6wzYsQA2vRDxylLSRO240Lr1bYzab6ITROLio5aw7IaLHOES6c5SsKcQfPF2pc0o378uKC2YJl2FwoggGHGASAxdNGccaCjXIu+BxdZ+AAjFSWwaMSE4URmEWSELchRARIGcZo/P1B5ztrCVsIWA3ogMbdAg759sh6HbOHITiJHfg62oZAiEZk4eQwCcAJklBhUW0zUEynrBhYuMbhQW1vshgwsMmJg/wqgW2ALWZwoAQrzAw8rkH4i9ZgyZYwQTWsrYCkkpYuUHjlEYAhB502xRRhbdHFDch4Rw4UTW2wBhBbwrNVAFj3gwBwQU/QQgjPVDNRCPzhQIWEUZHwUQBRU/PHHKz2kWFAbexwRgg86TAHED0B04QMYDP6TTAw46CVFNG14xA0PSDDAABIxGtRCG7t4YMMQWNxjhhJK2MBDPkEKQKQZNpzDj0cBMGmKKUjAIGNCfqxzQw9bKjGHFmmUZ0c6dniZhCIdpalEI420GU9Dz2DAA1xK2CFDLwPxcUSGMEDTTUdxaIEJEpzCQIJDLYSyqBJm9JCEJAN5BwMMMgjSESs5OP+hV1W+/JMNGA+o8EAEoKgiZRo+dOHEGDFIM9ApFURRSA41ALqRJlzoCASHxxDSSQx1ZIvIHVeAEU5BkoDRhH/M6qYIClk0kUMDgXBkSDDCOiGvAqqMMYYU+EpRiA93HFBAQYbE0MQYPtDBx0Aw3OBDDp5gwJEAQuhgw8Q2ZJIJxRjjwIMQEIhAIBsyaIFFEvYMZE8SMsiQxBsPxwADDjDjIAwfPMCgQ8wx9xCDGp8QNALKQrwQxEDYsHFDDEk8YMRGAsypw9M9VGKJFkMIgUfNTz8NjiBDiDLQJ2ocMUQQetAg0DUUJHGEN1XAsdEGQ9S8qgxx/APHLfhAkEQMeKz/uioWNRAwEA1vqMEGE288IZARIDDBhhqwELFRIEX40MTlyAhAkCjagHJFupfnUAQeBNEDgh5v+MPIQK2c/kYHq2tEAB05RBGFD5G0a1Aln9sexR1VLC3QKqbIwcAgCQxEvBxyIL8RAdNk4cPCnriCEA93TO8DIpC4HRMHV9SRQw5Z0CH4QWkUMX4OiBzg/UoDQBBDyjK8cL5BJbxA/w1MAMPTOEyomhCClgaEqOMFAxTCOx7AAp6w4AF7i0EMjhA8g4ijCkeQ4A1qMAEv8MQLBqjBEG5wgyHU4BfCE4gxkqAMEt4gCRRwVVLk8IAXDOGGR6iBO0QwgAGgIgOkENsQ/45AijfEjicJkAAk6FCEJhbhCgdgAjsOcAUnPvEBVfBgVnjwhj284ItgDCMYa1CFWUBKLcx4gB72EIQ2uvGNQYBAFSQwiM8oYAVvoAAEasDHPvKRCRmQAAy0CBkLwKIDeqgCBZjASCZQ4AEgWMEyCPmZR2CgFbOQgAE2aYB54OINdfuMQR4BCnSc4JTzCIUCKCnKVrrylbCMpSxnScta2vKWuMylLnfJy1y2YAbAJILZBPKE8hBkDVZYAhGM+Q8WuMEFMximSFiwAxaw4AlLcINAXNBAAu1gBkZoARGgIE0rWGFpT4BCN0PCAheI6BLbXKdArCC5gbAACgJZwxJS0qnOgRgBn//gJoH6YJAlKG4H0jTJPYE5A3LGkyD9LAgw/wFPgRABmIqbZjWtSYQdPEagg9uBQdwguT7ohgYsIII7p7lSgcxAciAdiEMJAoWlLWENEG0pSCL6jxYINKbE9OhArKDNf9AAoQNZg04/QoM+uOCpyhTIEnbwVBfs8x9P2IEVZvBNghx1qztYQkIhY4SxikievUyrWtfK1ra69a1wjatc50pXhAQEADs=); }
+#menu ul li a#linkedin-link { background-image: /*savepage-url=/images/linkedin.gif*/ url(); }
+#menu ul li a#github-link { background-image: /*savepage-url=/images/github.gif*/ url(data:image/gif;base64,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); }
+#menu ul li a#about-link { background-image: /*savepage-url=/images/about.gif*/ url(data:image/gif;base64,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); }
+#menu ul li a#weibo-link { background-image: /*savepage-url=/images/weibo.gif*/ url(data:image/gif;base64,R0lGODlhRQBeAOeuAFBST05TVU9UVlJUUVNUUlBVV1RVU1FWWFVWVFJXWVNXWlZXVVZYVVRYW1dZVlVZXFZaXFdbXVlbWFhcXlpcWVtdWlpeYFxeW1pfYV1fXFtgYl5gXVxhY19hXl1iZGBiX15jZWFjYF9kZmJkYWVjZ2BlZ2NlYmRlY2ZkaGFmaGVmZGdlaWJnaWZnZWNoamdoZmRpa2hpZ2VqbGhqZ2ZrbWlraGdrbmpsaWhsb2ttamltcG5scGxua2pucW1vbGtvcnBucm5wbWxwc29xbm1xdHByb25ydXFzcG9zdnJ0cXB0d3N1cnF1eHR2c3J2eXV3dHN3enZ4dXR4e3R5fHd5dnV6fXh6d3Z7fnl7eHx6fnd8fnp8eX17f3h9f3t9enl+gHx+e399gXp/gn1/fHuAg36AfXyBhH+Bfn2ChYCCf4OBhX6DhoGDgISChn+Eh4KEgYWDh4CFiIOFgoGGiYSGg4KHioWHhIOIi4aIhYSJjIeJhoWKjYiKh4uJjYaLjoyKjoeMj4mOkY6SlZKXmZabnZidn5ugopyho56jpaGmqaiusKqvsauwsqyxs7W6vba7vre8v7vAwrzBw8HGycfJxsXKzcfNz8rP0c3S1c7T1tDV2NTW09HX2dja1tvg4+Di39/k5uHm6eXn5Obo5evu6unu8O/x7vT38/b49Pf59vn7+Pr8+fv9+v7//HR1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1d3R1dyH5BAEKAP8ALAAAAABFAF4AAAj+AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmS4pAoWrx8KaOmJcQMN5hAiUIFy5c0cujYZLhAhI0bNGzoMBIFDBw8QxdS4NBhw4UKG1IIqdImT1SIDCzEeLKGz9eHCCCkaOLGbEkkTahoGfMG6kQGLrTUIUkECZMmT+SasfNH4Y0oXca4ITggwo80bj/6CGKEieUlmKmk2aMQhJAlUsbYYWzCyt6PN4IgSbKE9RImS5p8uaNQQocPJnzMJgiByBrOHGmkPpKkuPHiTr7MaciAAo8zfQYikAHGrkYYwzFr355caMMBGZz+jBZogMWW8Rlf2AhC/DUT169jf0HvhIoVK1vCnIlDkAGRxQIhUEIV3mG0wnpGKKEEZscZ14QWa6RRRRNMPMETFVV44QZw/zDgAxrSpWBFgRaVEIMQqxXH4HatMSHFFlpEYRlsMz7xRR2FdXjDFwMt4AIWy11kwgtApKhia60dh4R7sCWhBGuwLVHFGuMtYAITAyXwghZyYNQCD0bAl0STRhDxAw865KBmDjz8QIQRq8W3hBVnsIHQAS9Y8YaQNxShxIywHUFEEDa0YMIHHSSqaAgs2NADe+5BmNAAHyDRhUUfyEAElLApQcQNL7SgkAMSVNBBCjcMMaYWJBpUQQ3+QvawpGVJDKEDDRAtwIAGMASRhBZzcOhRBjIY8ZoTSwyxA0UFUMCCEFGY4cYb/Hkkgg9jNgGFpxYNAAEKTGnxhRtecVTBC5Vp60RCSzghrp0KDTBBsTp5sQZtG1lwA1xUSIGQEEUk0YQVWkgbJEKU9rDgg21pxIAHPzAhVxYH1eCre3F5kYYeo9KwpHynYcTACUNAsQWPBr3gQ5jGYfbgG5EZVAALRWhnhRscY+TjEVSgXFAHNBhxRBA68LDpe014MUd0BxFgAhGYuZgGvhcZ8MKvaxzUwQ9J6JBCoi9sOqYUZ+RskAFPPwnaGQdbJEALSHjRaodXLjGQARXs+xr+FPMhhJexr1FhRrUXBeABEUobtMCWBTEQA+B8d3lQ3rMyUYUZGgFAQQ7AygwD5gQ1EANxTEShMUIj+DDrE+JuNDMVbQ9kwhk/47BafVsgZBTLTBDMEQAVCHGGsAJR8ESBMMywaWxSWHHQCTao+toT93U0gAdM0ME0QSU84YUVSQTRl4MHtUADEQsy4URgHwkoRRxmD9SBDD38MJkQPeQQxEEy3HD0ZUkIiQJSIIW6uMoCHjDBCVgQA4TgoAe8S0IR9ieSBHwgCF+QHESIwEHiJOEIRqBgSSbwAtmYAUQLeY2SzISDG6SkARpoARGkIJMvgIELXPCCFu5DhSdcJoT+P8BBDWZgkwp4wAX+S8L6pCCjJCDBTD0AlQpEdRaBWKADCSQBC1JwghKYQAQKrKIYx0jGMprxjGhMoxrXyMY2uvGNcIyjHBHSCoLUcSB3bIUe9yiQPO7xjnjko0cmoYU+RsJfAlGFv0AhhUY68h+MhKQjtTAIPEKikV04hEdGgchW7MEP/mpFJhaJSIJEMpICUUQoJVHKRvhMI60AHSukgIkq/KMViCClQU7ZyU2EspAESUQpNSLMf2hCCqooZCtQxkhVCJKXzkxFHPxlimH+gxPWxIgltNCKQvhLEIs4BSIZ6chGSlKSjszaP0JhTU9k8yKkkMIogPkIQ1RinNlo5OVAGOGvUgyzFZR4p0Va4QdHIPITfiAEPnepy1t2ApGAMAQe1yBQi7gSkaswAzAl6Uw9CgSarVBFHUrZhUusAhWBqOhFzCkQlra0nIiMaTkLMtM52vSmOM2pTnfK05769KdADepBAgIAOw==); }
+#menu ul li a#home-link { background-image: /*savepage-url=/images/home.gif*/ url(data:image/gif;base64,R0lGODlhRQBeAOe4AGhpa2lrbWprbmtsbmtsb2xtb21tcGxub21ub21ucG1ucW5ucG1vcG1vcW5vcW9vcW5wcW5wcm9wcm9wc3BwcnBwc29xcm9xc3BxcnBxc3BxdHFxc3FxdHByc3BydHFyc3FydHFydXJydHFzdHFzdXJzdXJzdnNzdXNzdnJ0dXJ0dnN0dXN0dnN0d3R0dXR0dnR0d3R0eHV0d3N1dnN1d3R1dnR1d3R1eHV1d3V1eHR2d3R2eHV2d3V2eHV2eXZ2eHV3eHZ3eHZ3eXZ3end3eXd3enZ4eXd4eXd4enh4enh5e3h6fHl6fHp7fnt8fnx9fn19f3x+gH5+gX+AgYCAgn+BgoCBgoKChIKDhIKDhYODhIODhYKEhYSFhoWGiIaHiYeIiomKjI2Nj42Oj46PkY+PkZCPkpCQkpCQk5CRkpCRk5GRlJGSk5GSlJKSlJKSlZGTlJKTlZSTlZWVl5aVmJWWmJaXmJaYmZeYmpiYmpiZmpmanJqbnJqbnZubnJucnpycnZydnp2dn56eoJ6foJ+goZ+goqCgoaCgoqChoqCho6Gho6Kio6KipKKjpKOjpKOjpqSjpaSjpqOkpaOkpqSkpaSkpqSlpaSlpqWlpqanqKioqqipqqqqrKqrrKurrKusraytrq2tr62ur66usK+ur66vsK+vsa+wsbCxs7KztLS1tra2uLe4uri4ubm5urq7u729vr6/v7/AwcvMzNDP0NbW1+fn5////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEKAP8ALAAAAABFAF4AAAj+AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFGCktIoJUZUURw4seSyIikgBGwc6LGoJsFSq165asUq1sFQNgoI4ZGURyKf/1RBMbEEiRIbTAgVNKVDqY4ZOmwk6IHI56QZASY4eJBAgReCp3IcEGJjBo0ZM2wo6GGopiMkJZAIIZLDB5iBonIYOGKDBQ0aNmDY4LGgxyCXmIhM6MHCBgoVXwR62rG4rg0bkGvU4IGjsqCUlY5k6GEDx4sIa26lKsGgiI0VeW20YKE6L48HPAKhtFQEA+0aLy6IydREAN0ZNYijnvHiBXQbPRz+3Ohz0tKQzTRYSBYCIgMOGMSzt7CbnkV3x+Ft8DEp6XyPGerZQAIJtNnXmHqP1ceCfZ3t0IANe5QkSRGb2XUaeKjNByCC9dUHIAw06OCADXiQFBsFOzx24Qst0NAiXp0tiNddLACIGmQj6jGSJUhsVgNkddWQoZA2CpceDdnhdRpkOUigwx0iQXLeD6qdNiMN3sG45HcAZidZYzLkAMELdIRkCRESPGclXt/VUKSW3wXY2AunOfBCHSB1goQFPty1Zl7xfbhdZ9C5eSFeLdrgAAtyfJSHCCXc0JiVCzYG3YIg1mdDd14iqR58LLRg5xwdKWLDBjm0MOmBMZ6GaYv+w21KJ4KRwQCqqhawEMdGhdgQAW2qdiacksIKSuOckwLpaqg37DABC2pkdAgLDdA2abEAviBspTd21qW3Fx4IZA8ZsNDGRYW44ABdqnkr5I+eqqatao/FlyUM2EGHr31C4sBDBi9ESxEjRiRwRAkTSKZqcAwHSlyL6cnrJoiqEcltBhyQ2wMcFBGRgRAsZIBCDDCo+gKInd1al2MtzCejfXS6uOSGeeUAAghCZBAERWGAAAAIbNjRAwc5bIryC3h1512NMmYHXXeSLRiq1Bic8IYfSQwggRUUzRJGFW7UMgq5PnR3YY2bulmpiwY6TacNVbIqAQh/2ALIE118YhH+LQJR4nEPLbs6QwslL3tjrJx2puxwoYJgAxkCybLRI0hIwIOK4gpn+GM2mg0u4fW1oIEQZnh0iRBp+gm34jVuSKljL9eFV9QLzoaGR5UIQUEPMLzdwo8teHfgzHRy+na4SmfAwxkeTaI77ycP5yXUACaYXu/3nRY94zBssDzuaP63bYaqrv7lh57PJyRqUoPQA/MdVUKEBTxYCHdeCbZ7/4z05mVXXkmaQQfeZzoiXOA/QELSjf6nHjfd5S548Z9dbBUqGnTgex1hzgRyYKH0xExDmIKRY7T1IQi27ITKgx9H+nNAzGEnQyJ8UfVeBiK7vChUF1ThRiTxt3C5aYL+hkPNpuDmnSphLjItSKFHIkGE3YXLel9KFmQk8x1b3ehCJdMAATPon3AtSWauKtkUkSQZKypLODDImA41YokjVMBaXozMab6jIiqWMYq2Glwat8iRSTTxB14MDhWzMzNC0Wl9jaFdyPi4kdylKVwvpMGX5MO5QxYvZgmyTxIxyJFICOGNa/NUevznGM7BjmkQy2TtONnIT3JmW4xbkNqEwzSlaeuGL1DQbNaYkUggIQNUOlnvXGW27HQnNbZ8G3dOE7wXgOAHvMRII3oggRug4AQLKoEKTFCCE6CABSkogdRYUIJyliCcC1KB1MoZMhuUwSOasAECWOCBm4XgZvjXBMEIPgCCe4LAA/XkJwg6kM+bdaADHkgAC9LgEViMYQpbyIJEt4AFLUQ0C1jIqEQ3KlEsZIELHuXCRCmKhStQAQwt+QgnQrIJqLj0pTCNqUxnStOa2vSmJbFBQXQ6kHAR5DQ/5WkcRcLTnvZUqEUFqkAutNSTFLWp/1DqUpFKVajmdKdWnWpThRrVrI4kjlzFald9SlWmhuSpXU3rUbeq1LBe9adaXWta2+pVoorVrFJF61ydKtapSlWtRo2qF3FK2MIa9rCITaxiF8vYxjr2sZCNrGRJEhAAOw==); }
+#menu ul li a#docs-link { background-image: /*savepage-url=/images/docs.gif*/ url(data:image/gif;base64,R0lGODlhRQBeAIQNAGhoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHR1d3V1dXZ2dnd3d3h4eHl5eXp6ent7e39/f4CAgIGBgaCgoHR1d3R1d3R1d3R1d3R1d3R1d3R1dyH5BAEKAB8ALAAAAABFAF4AAAX+4CeOZGmeaKqubOu+cCzPdG3feK7vfO//wKBwSCwaj8ikcslsOp/QqHRKrVqv2KzWGXlAvt+KdvJgHM5oBEMCiViokAV6nkYcEI/LcgJ5PCIXGBF2dIVoCQ4Ub0YScmkMEISGkwgJeUN8DJJpk51ziHo/EY6epZ6gPgwGpqynDqE5CqSttIWIijkBBbW8hZWXNwEEvcSfrzcDAavFxag2BLvMzcc1A9HSxLeLMrrYzL+wMMLe0s4wycvkrQYGBavmL9DqpewIcu0C7ggSMtbzlHIKMCBxAJoBBuFajPv3acGDHwQGpPuXgIIQefPq8RPiTxo7A/YOCCSysBfIgAWmFCBBV+vkgYFNMNILCfNJx040qZSkc/KhFZZzcmaRac/nFgDDim4hMYCAAqNLR0CNSrWq1atYs2rdyrWr1683Gogda2Jsg7JmR5g9G4StCLEk4H6Q+9YtW7pD3Nbdq/auXrVH/soVfBcFWSJ/574tu9jw4bYlBkcuvAKvD8J8+Vo+kZiHXrqH8YJuPLfzjrWJ004OrRqs69ewY8ueTbu27du4c68IAQA7); }
+
+#content {
+  padding: 2em 0;
+}
+
+#content h2 {
+  margin: 0 0 0.5em 0;
+  color: black;
+  font-size: 1.5em;
+}
+
+#content p {
+  line-height: 160%;
+}
+
+#submenu ul {
+  list-style: none;
+  text-align: left;
+  line-height: 200%;
+}
+
+#submenu ul li {
+  margin-left: -20px;
+}
+
+span.date {
+  background: #6e9b20 /*savepage-url=/images/green_gradient.gif*/ url() repeat-x top;
+  display: block;
+  padding: 0.4em 0.6em 0.5em;
+  font-weight: bold;
+  color: white;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;  
+  -moz-box-shadow: 1px -1px 5px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 1px -1px 5px rgba(0,0,0,0.4);
+  box-shadow: 1px -1px 5px rgba(0,0,0,0.4);    
+  float: left;
+  text-shadow: black 1px 1px 4px;
+}
+
+div.post {
+  margin-bottom: 2em;
+  color: #333;
+}
+
+.post h1 {
+  margin-top: 0.2em;
+}
+
+.post h1 a, #content h2, #footer {
+  text-decoration: none;
+  clear: left;
+  display: block;
+  color: black;
+  padding: 0.3em 0.5em;
+  margin: 0 0 0.2em 0;
+  font-weight: bold;
+  background: #f8f8f8 /*savepage-url=/images/header_gradient.gif*/ url() repeat-x bottom;
+  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  font-weight: normal;
+  color: #000;
+  z-index: 10000;
+}
+
+div.post h3 {
+  color: black;
+  margin: 1em 0 0.7em 0;
+  font-weight: normal;
+  font-size: 1.4em;
+}
+
+pre {
+  background: #f8f8f8;
+  border: 1px solid #E7E5DC;
+  border-width: 1px 0 4px 6px;
+  padding: 1em;
+  overflow: auto;
+  color: black;
+  line-height: 120%;
+  font-family: "Consolas",Monaco,"Courier New",Courier,monospace;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+table.post-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.post-list a {
+  color: #262;
+  font-weight: bold;
+}
+
+table.post-list th {
+  text-align: left;
+}
+
+table.post-list td, table.post-list th {
+  padding: 0.5em 0.3em;
+  border-bottom: 1px solid #ddd;
+}
+
+table.post-list tr:last-child td, table.post-list tr:last-child th {
+  border-bottom: 0;
+}
+
+div.related {
+  margin-bottom: 2em;
+}
+
+#footer {
+  background-position: top;
+  margin: 2em auto 1em;
+  width: 960px;
+  color: #444;
+  font-size: 0.9em;
+  padding: 0.5em 0;
+  text-align: center;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#footer a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.home-box {
+  float: left;
+}
+
+#content .home-box h2 {
+  background: #6e9b20 /*savepage-url=/images/green_gradient.gif*/ url() repeat-x bottom;
+  padding: 0.3em 0.5em;
+  border-bottom: 3px solid #262;
+  margin-bottom: 0em;
+  color: white;
+  font-weight: normal;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;  
+  -moz-box-shadow: 1px 0px 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 1px 0 5px rgba(0,0,0,0.5);
+  box-shadow: 1px 0 5px rgba(0,0,0,0.5);
+}
+
+#content .home-box h2 a {
+  font-weight: normal;
+}
+
+#content .home-box .post h1 {
+  margin-top: 0;
+}
+
+.home-box h2 a {
+  color: white;
+  margin: 0 0.2em;
+}
+
+#home-left {
+  width: 680px;
+}
+
+#home-right {
+  width: 260px;
+  margin-left: 1em;
+}
+
+#gotgit-left {
+  width: 120px;
+  margin-right: 1em;
+}
+
+#gotgit-right {
+  width: 820px;
+}
+
+.clearfix { clear: both;}
+
+code {
+  font-size: 1em;
+  font-family: "Consolas","Courier New",Courier,monospace;
+}
+
+.home-box .post h1 a {
+  font-size: 0.7em;
+}
+
+.sidebar-item {
+  text-decoration: none;
+  clear: left;
+  display: block;
+  color: black;
+  padding: 0.5em 0.7em;
+  margin: 0 0 0.8em 0;
+  font-weight: bold;
+  background: #f8f8f8 /*savepage-url=/images/header_gradient.gif*/ url() repeat-x bottom;
+  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  font-weight: normal;
+  color: #000;
+  z-index: 10000;
+  font-size: 0.8em;
+  line-height: 150%;
+}
+
+.sidebar-item h3 {
+  margin: 0 0 0.3em 0;
+}
+.sidebar-item h3 a {
+  font-weight: normal;
+  color: #426a25;
+  text-decoration: none;
+  letter-spacing: 0;
+  font-size: 1.2em;
+}
+
+.sidebar.big .sidebar-item {
+  float: left;
+  width: 25.2em;
+  margin: 1.2em 1em 0 0;
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.float-left { float: left; }
+.float-right { float: right; }
+
+a img { border: 0; }
+</style><style data-savepage-disabled="" class="darkreader darkreader--cors" media="screen"></style><style class="darkreader darkreader--sync" media="screen"></style>
+    <style data-savepage-href="/stylesheets/syntax.css" type="text/css">.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+</style><style data-savepage-disabled="" class="darkreader darkreader--cors" media="screen"></style><style class="darkreader darkreader--sync" media="screen"></style>
+    <style data-savepage-href="../static/worldhello.css" type="text/css">body {
+    min-width: 740px;
+    width: 960px;
+    margin: 0 auto;
+    -moz-border-radius: 1.5em;
+    -webkit-border-radius: 1.5em;
+    border-radius: 1.5em;
+}
+
+div.related {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+</style><style data-savepage-disabled="" class="darkreader darkreader--cors" media="screen"></style><style class="darkreader darkreader--sync" media="screen"></style>
+    
+    <script type="text/javascript"></script>
+    <script type="text/javascript" data-savepage-src="../static/jquery.js" src=""></script>
+    <script type="text/javascript" data-savepage-src="../static/underscore.js" src=""></script>
+    <script type="text/javascript" data-savepage-src="../static/doctools.js" src=""></script>
+    <script type="text/javascript" data-savepage-src="../static/translations.js" src=""></script>
+    <link rel="top" title="GotGitHub" href="../index.html">
+    <link rel="prev" title="6.4.4. GitHub Open Source" href="../06-side-projects/opensource.html"> 
+  <style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #ffffff !important;
+}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style>
+    <link rel="icon" href="">
+    <script id="savepage-pageloader" type="application/javascript">
+      savepage_PageLoader(5);
+      "use strict";function savepage_PageLoader(maxframedepth){var resourceMimeType=new Array();var resourceBase64Data=new Array();var resourceBlobUrl=new Array();window.addEventListener("DOMContentLoaded",function(a){createBlobURLs();replaceReferences(0,document.documentElement)},false);function createBlobURLs(){var i,j,binaryString,blobData;var a=new Array();for(i=0;i<resourceMimeType.length;i++){if(typeof resourceMimeType[i]!="undefined"){binaryString=atob(resourceBase64Data[i]);resourceBase64Data[i]="";a.length=0;for(j=0;j<binaryString.length;j++){a[j]=binaryString.charCodeAt(j)}blobData=new Blob([new Uint8Array(a)],{type:resourceMimeType[i]});resourceMimeType[i]="";resourceBlobUrl[i]=window.URL.createObjectURL(blobData)}}}function replaceReferences(a,b){var i,regex1,regex2,csstext,blobData;regex1=/url\(\s*((?:"[^"]+")|(?:'[^']+')|(?:[^\s)]+))\s*\)/gi;regex2=/data:[^;]*;resource=(\d+);base64,/i;if(b.hasAttribute("style")){csstext=b.style.cssText;b.style.cssText=csstext.replace(regex1,replaceCSSRef)}if(b.localName=="style"){csstext=b.textContent;b.textContent=csstext.replace(regex1,replaceCSSRef)}else if(b.localName=="link"&&(b.rel.toLowerCase()=="icon"||b.rel.toLowerCase()=="shortcut icon")){if(b.href!="")b.href=b.href.replace(regex2,replaceRef)}else if(b.localName=="body"){if(b.background!="")b.background=b.background.replace(regex2,replaceRef)}else if(b.localName=="img"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="input"&&b.type.toLowerCase()=="image"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="audio"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.load()}}else if(b.localName=="video"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.load()}if(b.poster!="")b.poster=b.poster.replace(regex2,replaceRef)}else if(b.localName=="source"){if(b.src!=""){b.src=b.src.replace(regex2,replaceRef);b.parentElement.load()}}else if(b.localName=="track"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}else if(b.localName=="object"){if(b.data!="")b.data=b.data.replace(regex2,replaceRef)}else if(b.localName=="embed"){if(b.src!="")b.src=b.src.replace(regex2,replaceRef)}if(b.localName=="iframe"||b.localName=="frame"){if(a<maxframedepth){if(b.hasAttribute("data-savepage-sameorigin")){blobData=new Blob([decodeURIComponent(b.src.substr(29))],{type:"text/html;charset=utf-8"});b.onload=function(){try{if(b.contentDocument.documentElement!=null){replaceReferences(a+1,b.contentDocument.documentElement)}}catch(e){}};b.src=window.URL.createObjectURL(blobData)}}}else{for(i=0;i<b.childNodes.length;i++){if(b.childNodes[i]!=null){if(b.childNodes[i].nodeType==1)replaceReferences(a,b.childNodes[i])}}}}function replaceCSSRef(a,b,c,d){var e=new Array();e=b.match(/data:[^;]*;resource=(\d+);base64,/i);if(e!=null)return"url("+resourceBlobUrl[+e[1]]+")";else return a}function replaceRef(a,b,c,d){return resourceBlobUrl[+b]}
+        resourceMimeType[16] = "image/png"; resourceBase64Data[16] = "iVBORw0KGgoAAAANSUhEUgAAAEAAAAA+CAYAAACbQR1vAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAFM9JREFUaN7NWwd8jdf/fmM2CEKq9vgXRa0apVX9qT1a+4cYQRaCiKiaaULsmEHsmLGJECv2CBKUGCFEbWKmapfk+X+fc+97cxMZ4mf0fD6P97657/me53nOPu+laR8gAdBhKSgrsBX4CLYIzgruCZ4L4gTxgpeCWEG0YI/AT+AkqCbIpcf7Vycz0VkEFQXugmDBVcELpD+9EtwR7Bd4C2oLcvzrzDATbiVoIVhlJB7/DqJTS38LdhlbRoFPbsTr168Vgfj4eDbzloIQwbP3LDqllnFC0Ftg80mMMBZqIeKrCFYInsbFxUGH3Cu8r8RY5vGNZbwSsHv8LMj80Uwwis8u6CMErpKMtAbo11evXuGff/4x/e1/MUIXrsfk1bwsXiU9Ekz+4N0CCX29iGCh4IVO5Pbt25g3bx5WrFiBkydP4q+//sLLly9NpJPWHvOkBPNnmJdxiDt37iA0NBTz58/HmjVr8OTJE/WM0WD+s1dQ/YOYYCa+AgzTlEo6SQrPkiULMmXKhMKFC6Ndu3ZYt24d7t27hxcvXijohrwN+Pzz588Vrly5Aj8/P9StWxd58+alMhQtWhSnT582mWuWLgqas3u+NxPMxH9rHHxMzZMESLJv376KmDly5MiB1q1bY/fu3Xj06BEePHiAP//8E0eOHEFwcDCWLVuGuXPnYtasWapWV61ahR07diAiIgI3b95ETEwMli5dipo1aypjzWPznvn1LpEkxQg6vhcTzMRXFUQk7Z+srYcPH6Jx48ZvGKCjYMGCsLe3R/PmzVG2bFnY2NjA0tISGTNmhIWFhUKGDBmQOXNmZVqhQoWU6Pr168PKyirFuJ6enqpV0YRkxpm7MCy+3r07mIkvLQhLboCiAawpEk6J6IdCnz59VOtLwQCmm4Im72yCMSPn2aCURmgawMHp+++//+gG9OvXLy0DmCIFldJtgjFDJsE4GNbrKRrAEb9Vq1Yf3YDx48crA8ghjal2i7Ei0930ubr7K6WoHH3ZB58+fQoPD4+PKp7jho+Pj5oKySHJTPAGVYGXIMNbmWAUX1gQnlJEOs7Rl9PV1atX0axZs4/eAooXL45du3YpDml0AybuTX5MsyuY1b5XatH05s/a//3339Uo/rENIBo0aKCmTHJJoxUwcSyzStUAEUaUh2ELm2rts9Bjx46pRcmnEE9w8cUVaCrToXl6Lt+3h2ED96Z47u6kOVmIkz5Jl65Jl7Es8NmzZ2ou/lTidTRp0gR37941dYXUuAt2Cv9c1PpGksxEKcElBkoJrHmK5/r/p59++uQGcKF19OhRNSPoLSEVPBO0oFbRkSBe3NMkM+Gmbz5SAgvi6MslKweilIhZCHJlt0TJwl+gUsmiCmWKFUCx/DbIZ50TuXNkQw7Lz5DdMityZrNE3lyyCrSxVs9X+L/CqFK6mLoW/twaWZIshc2RNWtWrF69WnFixaTFXxAgGjJTsylJRsJKvtitb0JSAge+v//+G/v27UOePHmSJfV5bisM6tQMh/08cGPdFDzYNEMhJnAarqyaiMglY3BsrhdCZw7DgRlDcWSWByL8vXFx+XjclOfvb5yO2OCZuCdX/m2VlwvqVikng61FslPizJkzFSfdhDQ03JBnylGzKUlGoobgIYOkBhbExU9ISAhy5cr1BqH8eXNjnXdfxO1bBOxfbMQS2awuBPg3878fMIP626KEZ/j8gSWm5+4ETUfnhsmvOCdNmoTY2Fi16UqLvyBe0JOaHz9+rGkiSMcAiksLFM+d3c6dO2FtbZ14VM6cCTP72xlIU8CRNcDtC8Aj2aCdP5ggLC3sk/xRoYZ8t6OAw6uVOTfWT0WtCqXeMGDy5MmKEzdmNOEtdKyS5zIJNE0yEZnFwbV0MS2wII66Bw4cQP78+RMRqfNNGcRumSUCWHtLZU92GfdPR+Dypg14fucWcGYXsMc/dfH8/uwevLh3B5eDg3Dv5AnEx0QbWpG0hJXSHWi0XibXIDNmzFCc7t+/nyZ/I6JEcyFq1yQTkV8QyQBpgQVxBjh+/DhKly6dyIAxzm0NzZkiIrbhUVQkQmxbY8N/auCEz1jE3bpgqN3UDBCh8TF/ImLqRJVve7sWiD0jO/GTW9T3HFNKF0kwnmuBRYsWqV0pN2Y8hHkLHU8EP1K7JpmIaoJYBiAYLCVQ/I0bN3D+/HnUqVMnoSZkMArw6Gnot3sWANFHcGntSmyoU1MhpH0rPL1wGji0MhUDxLjDq/DschR2dGpryCsmXFguMS+EKmOfbJuDHyomGM9xKCgoSHG6detWqtx1k4xwonZNMhFtBK8ZwBxcZjLwtWvX1Jqfx1M81bl48aIyoEePHolG48VDnRIMuBSmiFNA0E/fYVubX/D43EklMFUDjsiUFh2J7e1bYoPkY/7zi+YDFw8pAx5vm51oHChRogT27t2rOF26dAmXL19WPMn3+vXrij91JNUmGE/tmjykiUBXimSQP/74Qx0+cqOxbds2bN68WR1hEfys32/cuBEjRoxAtmzZTGRGO5l1gTM7cTf8MIKb1kPgD9VwaGA/vLoelTAjmAa8JAOjjB2vb1/C4SG/qnzBjX9CTOg+4FSI+j5mgy/KFS9oKpNnEVwHkI/Oz5zzli1bsH37dnU0d+jQIXVoy0oUvQFiUgZNHCNG0bmwsDA1vR08eFCt8/kwFzwnTpxQqy0aQ7d5dsdCli9fjkqVKpnItKxdBS93zjcICV2OuHvXcClwLY6N9sLDs9L8ow4mGgRfhczFM5ne4s0HRn6+eBix5yNxfMxIRK9dhbiYy8DBADW7HJX1g7VVdtMAyFa4adMmbN26Vc1MXJ9QKPnq/HkNDw/H/v37lT7ei97t0dHRltqFCxc0+eDL2pfPOHXqlArAB+lqYGAgNmzYoATzb3v27FEG8ZnDhw9j6tSpyJkzpyJkIwugUL/hCa3g+CYg9hbin8TK9upk4toXMTHzRiKsly3+2T7HMHOYtQJcO2XI9/AmcGyjIZ7EHdejnclwnjFSPHmQD2cm1jRrnLVP3uTPZ2gOK/jMmTNKp+gNlWtOLTIyUouKipojUDW8fv165SbdYivg8bM8o/q8Oc6dO6eCcTbo2bOnOtQkqWbfVVaLFsNagKSXGQe+xE09btd8vNjsh0drJuPV9rmJW4HeNZiPZuw1iD+3bCzKFjM0fx6g8lSI/M6ePav4kBd16BzJmxXK1sCWy0qkPt7Lc+HyjLUmmYk5DMJgekCCApOD/pzePdgiePLL014LCw2t/1MN52S5a1rxvbHQWYTH66bihiyVY1f44MbM4WLIghSmxUVK/IWA8Whco6ISnz17dri5ualmTQ7kkhJXHbomM43hAmtNAmjiki+dYrC0wP6j+paAAyZbCR2lCV5eXihZsqSaEUoUsIFH1xYIn+OJWKnpOGMTVrOEcYn7ePUk3PcfhZdbZ0sfX5Lwnfp+EV7smIfo5RMwvV9nlJOaZ9wvv/wS3t7eqtmz9bEC3oZ3Uojeg4KcmgTRRMgoikkLLJCC2c/8Fy5E0OZgNeiQjA42MVdXV1SoUBHZpKasrbKhquzsOtavieF2zdVSednwHlg3qi82juuP4PHucnVD4GhXrB7RGwsHO8CnV3u4tqmPhtW/RpF8eZBD4pQtWw4uLi7qjRNfrrA/03hyIt6GfxJsF1hq0owIVzantMBCifnz5uHryhXRsGNbuAx0R6AMNhyA2Ao4jvDK6Ye7tD59+qJho0aoULEirI27R9ZkpowZkDlTRhMyZcyIjDKq87t8X3yhnq/foCF69XKBr+90Najpgy+hm/A2vFNAgBiYQZNgRBvBaz14SqA4Ct22dz+8fCahVOlS+Lp2TXTu0wNr1q5RAw1bBAdQXgnOGhyVZ8+e/cbSOSXwRQtffTEf8zMeYW4ykRbfNDBeYmiaBCaqCWL1glKCErVnN5aERWDusXOYKruwoiWKo1LdH9DLvR+2yCjL6YaLKHYTXjl1cqlar169dB17d+nSRS3EGI8mmJv7nuBE7ZoEJ/IL4UiSTg0UtEsIBRw8ivmhf2CrNPMezj2Qr2gh1G79M4Z4DFdzL4mz9njllMoz/NTe8yUHvmVevHixMpAmpMUtnXgi+FGgabKq06SAzFLQWhaWGihKF8Y+znmVJEsUL4HCZUuhZtP6sHN2xKhRo+A3yw/TfKfBY4QXqlarZhLG9YL+tpfTZvny5dWLUt7z7/oRO3d5I0eOVAayvLS4pRNRorsQtWtSgCZCNBE0gKLSQtL9AGu8a9eu6gwwX7EiKFruK9Rq3hjfNamPGo3q4lsxJVtOq0Rrd74BVitHGxs4OTmpcz3ef/XVVyhTpoypG3Cu5ypOX9O/R6wSUzNRu0oihKgheEhRaYF9mqB4TnsLZUqsVauW6XU3BWfNng1Zs8nCyOwcjzXs4OCAYsWKmQzgvW5A9erV1W8KdAM47TE+l7Ms7224vQXiBT0lnibGGgyQAggrKWw359n0gD9X4W6MP3YgeZ4Smf+ggZ/1ZTKbda9evUwvU2gAV5C6AVWrVkWnTp1MBnCJzdgsI728UoJovCEoJ0g4FJUCtJUrV2pSmBt/qZEeSD71ExnuDPmLDp7PDRgwQNUs0b9/f9U6dAO4eytSpIjJgO7du5sMqFKlCmxtbU0GsHswLuOnl1cqCFi7dm1mak6UpCCiVEBAwCUB0gPO2RS/ZMmSROBRlb+/P5o2bWoywNHRMZEB3bp1w2effabuv/nmG/X7It0AGshBlrHTyykFPBONLeSqiamJDZBCOA5YSIE+LDS9oFiC4wFB4fztD7tGI1kJ6jMAa5xTnG4AB1DdgMqVK6Nt27am7kNzFixYoGLp8d+Fmxl2is5cUjlaskkKI8oLrpL8u4AvKwn9B1BcDvMtrm5AV7suiWYB3usGVJLlb2vjjy3UYqhzZ8zy81OrSMbTY78jt+eiq71cNTE0eQOkEI2j45w5c7xY6NuCQgn+nI2CZ0yfjunTpmHqlCmYPM0XdRsaW0CWrGjjPhj5S3yp7q0LFUGL4WNkxjCc8JT5rjYaOboYWoAY0L5rd0yeMVMdukyfNlXi+qr4LEcvMx08g0SfFTWmmqQAovCMGTPCed6eGqZTqMDX1xfTRPCUyZPUW5pxfnPguTwQA7cfQd+waJT5xdCsM+ewQv0F65GnnGFfn6tkGdTzD0SWnLnVfbHGLVFrwlwlXu0J3IbBNeIWBuz+A8PXbMHoOf6YOHkKpkgZNIXl6hzS4HpHNP0oV014pm6ABNWmTJmiSQEtBX/JZ6QEjvgUPNFnAsZN8IHngmVw33kcPc8+gMPV17C/CTRasQOW+Qzn+J9Xro6fgw4iRyHDNJi/Rm20DDmBHIUN64IvqtdCs/X7kL2AYYywLlsBrXadhv0twP5aPJyjHsP14DkMC1iPsZOmwGfCeFU+eaTCM050eEmryUBtb5UkKE3INHHixHGyjo/jWj4pJkyYoI6kxo4ZgxFTfOG24xgcLz1H9xtCVuAg4utMX4Zs+Qsio0xz+arWQLN1e1FnZgAyGNcJ1QaPQXcxqlT7boY3vbnzKIP4TO7SZZFBxgxem63br+IxLuM7XHmFPocvwmP2QoyR8smDfJLjKRq2iB4bakpXkqCEzdixY4MESAoWPMrbG7/7TIbLkUuKnMJ1I+Rz3cVHUa6vP76fshP/DbuP9uFXkLf8N8qAkm06odOpu3CQ2m17IAoFf6grTV+6QaPm6HT2EZptvYEqIzajnKs/mm+/YDDgegK6y71z5EMMERO8Zc8wevRoxSkJz8hx48ZVEmjyffoMkA2NjtLe3t5h3JgQPI7ile8EPD084LZ2e2LhZuh4Dmi6C6gfJF1hK9Bg9SWU+O9QVPFcDduIRyZRvLY9FIMK7vNRsstINAh8qPI0CAbahAPdriQfnya4HIiEh9cIdRynczTyvCncm8hnpeOdkgTVPD09ea0q1wj+IEoHfxo3bOgQ9Nm0X/X15Ag6iDGdo0T8ZmkN64GGIqhJiMGQpjsAu2jDMx3PGg3aaLjWCxTI8y0Osu8nH1tByu1x9AoGe3rBY/hwmPG7K3xtpfkrDf9TGj58uDZ06FBev5XrCQGIIUOGYNBvA9Fv6iw4XHicYisgftmbYEDrI2LABoPA1mGG2qUZ/L6xiG9xwGAAn+lw2mBQsnH592uv0Xv5Rvz222+Kj5FbzLBhwzqKARbk/l7S4MGDNSmE1wpy3cMCBw4ciF9//RX93d3hMmsxHE7fM7SEZAhTFAU22AS0jzAYwftm0j06Rhpqnvc0igbRHBrAlvFGvBuGmneIfoaeq7bBbeAgtfcgH+F1cdCgQc1FuAU5v9ckhWgimCginxe6u7u/4EaHv9nt27cPXDxHwWn9bjiceSBE4xOZYW4Aa1XvEk2lO7Q/aRDL+5YHDa1CN8BWN8AoWl0vPIFjiEy1E3zR19UV/QRubm7xwmevcKsufBTPD5ZYgBSYXa59XF1dr/L/CvCX2y6yzeVW13mIBxxnL4XDtqOwP3Eb9jI1tjgQj7qBhkGtwxlpAdLUed9Emn47aRH1ggz3LULFgHDD53objQZc+Qf2NHXPGTguXg9nrzHo2VvKk61y7969WfYj4TFZ+BQgN/n84cTrSQrWRLiFXKu4uLisEOFPuXfnVreHbGGdHR3g6NwDDm6yLR4xFh1H+6PVuGC0mBmKjhtP4ecl0Wi88Bp+WXMTHXbfQuOlgsXX0SbwT7Rffxa/zAxD68nbYDdtGRzGTILDr4Ph2LMXnCSus5OjKkfKeyXl7pfyfxZkFnx44ebJ3t5eExKEpRBq6ezsHCL792fcw3PLq84D7O1h370b7Lt1FXRTO8FuDk7o6tgTds59YNfTFV1dXNGlh6u67+rcC90cndBd8nU3y+dg313FY1zBKynjhJTXW8q1ERMUl0+W7OzsNCGkCTErIdlCyKwS3BGx8UqwCDAHt78G2BlgZ5fw2fhdN8IsD+MI/pa4u6QMJymrgGybP63wpKljx46akNVEQBa5VpSruyBYDLoqeMFz/vRA8rwS3BHslzjeErO2IAdF0/R/derQoYMyo3PnzpaCsp06dbIV+Ai2CM6KWfcEzwVxgnjBS0GsfBct2CPwEzhJ3mqCXLa2tsrgD5H+HyM56QyEqV0zAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTAxLTA3VDEwOjE2OjM1KzA4OjAwNq6gOAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMi0wMS0wN1QxMDoxNjozNSswODowMEfzGIQAAAAASUVORK5CYII=";
+      }
+    </script>
+    <meta name="savepage-url" content="http://www.worldhello.net/gotgithub/appendix/markups.html">
+    <meta name="savepage-title" content="7. 附录：轻量级标记语言 — GotGitHub">
+    <meta name="savepage-date" content="Sat Feb 02 2019 11:08:30 GMT+0800 (中国标准时间)">
+    <meta name="savepage-state" content="Standard Items; Used page loader; Retained cross-origin frames; Removed unsaved URLs; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;">
+    <meta name="savepage-version" content="12.7">
+    <meta name="savepage-comments" content=""></head>
+  <body>
+    <div id="header">
+      <h1><a href="/">World Hello</a></h1>
+
+      <div id="menu">
+        <ul>
+          <li><a href="/" id="home-link" title="Home">首页</a></li>
+          <li><a href="/blog.html" id="blog-link" title="Blog">博客</a></li>
+          <li><a href="/doc/" id="docs-link" title="Docs">文章</a></li>
+          <li><a href="/about.html" id="about-link" title="About">关于</a></li>
+          <li><a href="http://github.com/gotgit" target="_blank" title="GitHub" rel="me" id="github-link">GitHub</a></li>
+          <li><a href="http://weibo.com/gotgit" title="微博" target="_blank" id="weibo-link">微博</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录" accesskey="I">索引</a></li>
+        <li class="right">
+          <a href="../06-side-projects/opensource.html" title="6.4.4. GitHub Open Source" accesskey="P">上一页</a> |</li>
+        <li><a href="../index.html">GotGitHub</a> »</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="../06-side-projects/opensource.html" title="上一章">6.4.4. GitHub Open Source</a></p>
+  <h3>本页</h3>
+  <ul class="this-page-menu">
+    <li><a href="../sources/appendix/markups.txt" rel="nofollow">显示源代码</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>快速搜索</h3>
+    <form class="search" action="../search.html" method="get">
+      <input value="" type="text" name="q">
+      <input type="submit" value="搜索">
+      <input type="hidden" name="check_keywords" value="yes">
+      <input type="hidden" name="area" value="default">
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    输入相关的模块，术语，类或者函数名称进行搜索
+    </p>
+</div>
+<script type="text/javascript"></script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="markups">
+<span id="id1"></span><h1>7. 附录：轻量级标记语言<a class="headerlink" href="#markups" title="永久链接至标题">¶</a></h1>
+<p>没有标记语言就没有Web和丰富多彩的互联网，但创造了Web的HTML语言并非尽善尽美，存在诸如难读、难写、难以向其他格式转换的问题。究其根源是因为HTML语言是一种“重”标记语言，对机器友好而并非对人友好。</p>
+<p>下面这段HTML源码，非技术控阅读起来会遇到困难。</p>
+<div class="highlight-python"><pre>&lt;html&gt;
+&lt;head&gt;
+  &lt;meta content='application/xhtml+xml;charset=utf-8' http-equiv='Content-type' /&gt;
+  &lt;title&gt;轻量级标记语言&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 id='id1'&gt;轻量级标记语言&lt;/h1&gt;
+
+  &lt;p&gt;&lt;strong&gt;轻量级标记语言&lt;/strong&gt; 是一种 &lt;em&gt;语法简单&lt;/em&gt; 的标记语言。
+  它使用易于理解的格式标记，没有古怪的 &lt;code&gt;&amp;lt;标签&amp;gt;&lt;/code&gt; 。&lt;/p&gt;
+
+  &lt;ul&gt;
+  &lt;li&gt;可以使用最简单的文本编辑器编辑。&lt;/li&gt;
+  &lt;li&gt;所见即所得，非技术控亦可直接阅读源码。&lt;/li&gt;
+  &lt;li&gt;可版本控制。&lt;/li&gt;
+  &lt;li&gt;实现单一源文件出版。&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;body&gt;
+&lt;/html&gt;</pre>
+</div>
+<p>同样的信息如果换用轻量级标记语言来表达，就非常直观了。如下所示：</p>
+<div class="highlight-python"><pre>轻量级标记语言
+==============
+
+**轻量级标记语言** 是一种 *语法简单* 的标记语言。
+它使用易于理解的格式标记，没有古怪的 `&lt;标签&gt;` 。
+
+- 可以使用最简单的文本编辑器编辑。
+- 所见即所得，非技术控亦可直接阅读源码。
+- 可版本控制。
+- 实现单一源文件出版。</pre>
+</div>
+<p>GitHub令人着迷的一个因素就在于GitHub为用户提供更为便捷地创建UGC（用户生成内容）的方法，其奥秘就在于使用了轻量级标记语言。无论是代码提交说明、提交评注、问题描述、项目的README文件、维基页面、用户主页和项目主页都可以使用Markdown<a class="footnote-reference" href="#id38" id="id2">[8]</a>等轻量级标记语言来撰写。轻量级标记语言如Markdown是对人友好的标记语言，一些语法参照了我们写电子邮件时的习惯，即使第一次接触用轻量级标记语言撰写的文件，也可以毫无障碍地理解其中的内容。</p>
+<p>虽然GitHub更倾向于使用Markdown标记语言<a class="footnote-reference" href="#id39" id="id3">[9]</a>，但很多地方也提供对其他轻量级标记语言的支持。包括为Python程序员所熟悉的reStructedText<a class="footnote-reference" href="#id40" id="id4">[10]</a>，为Ruby程序员所熟悉的Textile<a class="footnote-reference" href="#id41" id="id5">[11]</a>、RDoc<a class="footnote-reference" href="#id42" id="id6">[12]</a>，为Perl程序员所熟悉的POD<a class="footnote-reference" href="#id43" id="id7">[13]</a>，为Emacs用户所熟悉的Org-mode<a class="footnote-reference" href="#id44" id="id8">[14]</a>，为维基用户所熟悉的MediaWiki<a class="footnote-reference" href="#id45" id="id9">[15]</a>和Creole<a class="footnote-reference" href="#id46" id="id10">[16]</a>，以及可作为DocBook<a class="footnote-reference" href="#id47" id="id11">[17]</a>前端的颇有前途的AsciiDoc<a class="footnote-reference" href="#id48" id="id12">[18]</a>标记语言。</p>
+<p>下面通过一张表格对几种常用的轻量级标记语言加以对照，供有不同标记语言偏好的用户参考，便于在GitHub某些不能随意更换标记语言而只能使用GFM（GitHub风格的Markdown）的场合可以自如地转换。</p>
+<p>在“<a class="reference internal" href="#tbl-markups"><em>表7-1：常用轻量级标记语言对照</em></a>”中，为使表格更加紧凑使用代号表示各种标记语言。例如：md为Markdown，gfm是GitHub风格的Markdown，rst为reStructedText，ttl为Textile，asc为AsciiDoc，org为Org-mode。</p>
+<table class="classic docutils" id="tbl-markups" border="1">
+<caption>表7-1：常用轻量级标记语言对照</caption>
+<colgroup>
+<col width="7%">
+<col width="8%">
+<col width="4%">
+<col width="4%">
+<col width="4%">
+<col width="4%">
+<col width="4%">
+<col width="35%">
+<col width="33%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2" rowspan="2">类别</th>
+<th class="head" colspan="5">标记语言</th>
+<th class="head" rowspan="2">代码示例</th>
+<th class="head" rowspan="2">输出示例</th>
+</tr>
+<tr class="row-even"><th class="head">MD</th>
+<th class="head">RST</th>
+<th class="head">TTL</th>
+<th class="head">ASC</th>
+<th class="head">ORG</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td colspan="2" rowspan="5">标题</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题 ######
+</pre></div>
+</div>
+</td>
+<td><p class="first">输出略。</p>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<ul class="last simple">
+<li>标题后面可接匹配的井号。</li>
+<li>Markdown的前两级标题还可以使用reST风格，即在标题下衬以等号或减号组成的下划线。</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>一级标题
+========
+
+二级标题
+--------
+
+三级标题
+~~~~~~~~
+
+四级标题
+^^^^^^^^
+
+五级标题
+++++++++
+
+六级标题
+````````
+</pre></div>
+</div>
+</td>
+<td><p class="first">输出略。</p>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<ul class="last simple">
+<li>标题级别和下划线无对应，文档中保持一致就好。</li>
+<li>reST标题可用下列符号标记：
+# * = - ^ ~ ` : . _ + ” 等。</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>h1. 一级标题
+h2. 二级标题
+h3. 三级标题
+h4. 四级标题
+h5. 五级标题
+h6. 六级标题
+</pre></div>
+</div>
+</td>
+<td>输出略。</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><p class="first">AsciiDoc 提供两种风格的标题。</p>
+<ul class="last">
+<li><p class="first">下划线风格标题。</p>
+<div class="highlight-none"><div class="highlight"><pre>文档标题
+========
+
+一级标题
+--------
+
+二级标题
+~~~~~~~~
+
+三级标题
+^^^^^^^^
+
+四级标题
+++++++++
+</pre></div>
+</div>
+</li>
+<li><p class="first">单行风格标题。</p>
+<div class="highlight-none"><div class="highlight"><pre>= 文档标题 =
+== 一级标题 ==
+=== 二级标题 ===
+==== 三级标题 ====
+===== 四级标题 =====
+</pre></div>
+</div>
+</li>
+</ul>
+</td>
+<td><p class="first">输出略。</p>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p>除了两种不同风格的标题外，还支持以点开始的块标题，块标题不生成目录。如：</p>
+<div class="last highlight-none"><div class="highlight"><pre>.BlockTitle
+</pre></div>
+</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>* 一级标题
+** 二级标题
+*** 三级标题
+</pre></div>
+</div>
+</td>
+<td><p class="first">输出略。</p>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">为支持更多标题级别需要设置
+<tt class="docutils literal"><span class="pre">#+OPTIONS:</span> <span class="pre">H:6</span></tt>。</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="14">段落</td>
+<td>空行分段</td>
+<td>md</td>
+<td>rst</td>
+<td>ttl</td>
+<td>asc</td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>第一段内容。
+
+第二段和第一段间有一空行。
+</pre></div>
+</div>
+</td>
+<td><p class="first">第一段内容。</p>
+<p class="last">第二段和第一段间有一空行。</p>
+</td>
+</tr>
+<tr class="row-odd"><td>自动续行</td>
+<td>md</td>
+<td>rst</td>
+<td> </td>
+<td>asc</td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>一个回车不分段，
+本行续上行。
+</pre></div>
+</div>
+</td>
+<td>一个回车不分段，°本行续上行。</td>
+</tr>
+<tr class="row-even"><td>不留白续行</td>
+<td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>行尾转义字符让\
+续行之间不留白。
+</pre></div>
+</div>
+</td>
+<td>行尾转义字符让续行之间不留白。</td>
+</tr>
+<tr class="row-odd"><td rowspan="6">插入换行</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>行尾两空格°°
+保持换行。
+</pre></div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">行尾两空格</div>
+<div class="line">保持换行。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>gfm</td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>GFM、Textile等
+保持段落内换行符。
+</pre></div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">GFM、Textile等</div>
+<div class="line">保持段落内换行符。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>| 保持换行符，
+| 本行不续行。
+</pre></div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">保持换行符，</div>
+<div class="line">本行不续行。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>.. role:: raw-html(raw)
+   :format: html
+
+用新定义的role插入换行，
+:raw-html:`&lt;br /&gt;`
+本行不再续行。
+</pre></div>
+</div>
+</td>
+<td>用新定义的role插入换行，
+<span class="raw-html"><br></span>
+本行不再续行。</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>行尾的空格和加号 +
+保持换行。
+</pre></div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">行尾的空格和加号</div>
+<div class="line">保持换行。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org*</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>行尾两个反斜线\\
+保持段落内换行符。
+</pre></div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">行尾两个反斜线</div>
+<div class="line">保持段落内换行符。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="5">段落缩进</td>
+<td>md</td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>邮件体段落缩进：
+
+&gt; 第一级段落缩进。
+&gt;
+&gt; &gt; 第二级段落缩进。
+&gt;
+&gt; 返回一级段落缩进。
+</pre></div>
+</div>
+</td>
+<td><p class="first">邮件体段落缩进：</p>
+<blockquote class="last">
+<div><p>第一级段落缩进。</p>
+<blockquote>
+<div>第二级段落缩进。</div></blockquote>
+<p>返回一级段落缩进。</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>Python式段落缩进：
+
+  第一级段落缩进。
+
+    第二级段落缩进。
+
+  返回一级段落缩进。
+</pre></div>
+</div>
+</td>
+<td><p class="first">Python式段落缩进：</p>
+<blockquote class="last">
+<div><p>第一级段落缩进。</p>
+<blockquote>
+<div>第二级段落缩进。</div></blockquote>
+<p>返回一级段落缩进。</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>Textile式段落缩进：
+
+bq. 本段缩进。
+
+正常段落。
+
+bq.. 注意缩进关键字后有两个点。
+
+后续段落持续缩进，
+直至遇到 p. 定义的段落。
+
+p. 正常段落不再缩进。
+</pre></div>
+</div>
+</td>
+<td><p class="first">Textile式段落缩进：</p>
+<blockquote>
+<div>本段缩进。</div></blockquote>
+<p>正常段落。</p>
+<blockquote>
+<div><p>注意缩进关键字后有两个点。</p>
+<div class="line-block">
+<div class="line">后续段落持续缩进，</div>
+<div class="line">直至遇到 p. 定义的段落。</div>
+</div>
+</div></blockquote>
+<p class="last">正常段落不再缩进。</p>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>四个或以上的下划线括起的区域为引言缩进。
+
+[quote, author, source]
+______________________________
+引言...
+______________________________
+</pre></div>
+</div>
+</td>
+<td><p class="first">四个或以上的下划线括起的区域为引言缩进。</p>
+<blockquote class="last">
+<div><p>引言...</p>
+<blockquote>
+<div><p>source</p>
+<p class="attribution">—— author</p>
+</div></blockquote>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>Org-mode式段落缩进：
+
+#+BEGIN_QUOTE
+ 段落缩进。
+#+END_QUOTE
+</pre></div>
+</div>
+</td>
+<td><p class="first">Org-mode式段落缩进：</p>
+<blockquote class="last">
+<div>段落缩进。</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td colspan="2" rowspan="8">代码块</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>四个空格缩进是代码块：
+
+    $ printf "Hello, world.\n"
+</pre></div>
+</div>
+</td>
+<td><p class="first">四个空格缩进是代码块：</p>
+<div class="last highlight-none"><div class="highlight"><pre>$ printf "Hello, world.\n"
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>gfm</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>三个连续的`或~等符号界定代码块。
+
+```ruby
+require 'redcarpet'
+md = Redcarpet.new("Hello, world.")
+puts md.to_html
+```
+</pre></div>
+</div>
+</td>
+<td><p class="first">三个连续的`或~等符号界定代码块。</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="nb">require</span> <span class="s1">'redcarpet'</span>
+<span class="n">md</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"Hello, world."</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">md</span><span class="o">.</span><span class="n">to_html</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>双冒号后缩进为代码块。
+
+::
+
+  $ printf "Hello, world.\n"
+
+还可声明语言类型实现语法加亮。
+
+.. code-block:: sh
+
+   $ printf "Hello, world.\n"
+</pre></div>
+</div>
+</td>
+<td><p class="first">双冒号后缩进为代码块。</p>
+<div class="highlight-none"><div class="highlight"><pre>$ printf "Hello, world.\n"
+</pre></div>
+</div>
+<p>还可声明语言类型实现语法加亮。</p>
+<div class="last highlight-sh"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">printf</span> <span class="s2">"Hello, world.\n"</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>以bc.或bc..指令开头的是代码块。
+
+bc.. $ git init
+
+$ git commit --allow-empty
+
+p. 本段不再是代码块。
+</pre></div>
+</div>
+</td>
+<td><p class="first">以bc.或bc..指令开头的是代码块。</p>
+<div class="highlight-none"><div class="highlight"><pre>$ git init
+
+$ git commit --allow-empty
+</pre></div>
+</div>
+<p class="last">本段不再是代码块。</p>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>原样格式输出，相当于&lt;PRE&gt;标签。
+
+pre..
+           更上一层楼
+欲穷千里目
+
+p. 恢复正常段落。
+</pre></div>
+</div>
+</td>
+<td><p class="first">原样格式输出，相当于&lt;PRE&gt;标签。</p>
+<div class="highlight-none"><div class="highlight"><pre>           更上一层楼
+欲穷千里目
+</pre></div>
+</div>
+<p class="last">恢复正常段落。</p>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>四个或更多减号括起代码块，
+还可声明语言种类。
+
+[source, c]
+-----------------------------
+#include &lt;stdio.h&gt;
+
+int main() {
+   printf("Hello World!\n");
+   exit(0);
+}
+-----------------------------
+</pre></div>
+</div>
+</td>
+<td><p class="first">四个或更多减号括起代码块，
+还可声明语言种类。</p>
+<div class="last highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"Hello World!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+   <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>正常段落。
+
+  缩进段落相当于添加&lt;pre&gt;标签，
+  等宽字体，原样输出。
+
+缩进会和其他语法如列表相混淆，
+可用 `[literal]` 显示声明。
+
+[literal]
+原样输出，
+显示为等宽字体。
+
+或用四个以上点组成的定界符标记。
+
+..............................
+原样输出，
+显示为等宽字体。
+..............................
+</pre></div>
+</div>
+</td>
+<td><p class="first">正常段落。</p>
+<div class="highlight-none"><div class="highlight"><pre>缩进段落相当于添加&lt;pre&gt;标签，
+等宽字体，原样输出。
+</pre></div>
+</div>
+<p>缩进会和其他语法如列表相混淆，
+可用 <tt class="docutils literal"><span class="pre">[literal]</span></tt> 显示声明。</p>
+<div class="highlight-none"><div class="highlight"><pre>原样输出，
+显示为等宽字体。
+</pre></div>
+</div>
+<p>或用四个以上点组成的定界符标记。</p>
+<div class="last highlight-none"><div class="highlight"><pre>原样输出，
+显示为等宽字体。
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>下面是代码块。
+
+#+BEGIN_SRC ruby
+  require 'redcarpet'
+  md = Redcarpet.new("Hello, world.")
+  puts md.to_html
+#+END_SRC
+</pre></div>
+</div>
+</td>
+<td><p class="first">下面是代码块。</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="nb">require</span> <span class="s1">'redcarpet'</span>
+<span class="n">md</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"Hello, world."</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">md</span><span class="o">.</span><span class="n">to_html</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="17">列表</td>
+<td rowspan="4">无序列表</td>
+<td>md</td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>* 星号、减号、加号开始列表。
+
+  - 列表层级和缩进有关。
+
+    + 和具体符号无关。
+
+* 返回一级列表。
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>星号、减号、加号开始列表。<ul>
+<li>列表层级和缩进有关。<ul>
+<li>和具体符号无关。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回一级列表。</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>* 星号开始无序列表。
+** 更多星号代表不同层级。
+*** 三级列表。
+* 返回一级列表。
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>星号开始无序列表。<ul>
+<li>更多星号代表不同层级。<ul>
+<li>三级列表。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回一级列表。</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- 1个减号开始列表。
+* 或1到5个星号开始列表。
+** 三级列表。
+- 返回一级列表。
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>1个减号开始列表。<ul>
+<li>或1到5个星号开始列表。<ul>
+<li>三级列表。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回一级列表。</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>列表语法和Markdown、reST类似。
+星号和列表语法冲突需缩进，不建议使用。
+
+  - 减号、加号开始列表。
+
+    + 列表层级和缩进有关。
+
+      - 和具体符号无关。
+
+  - 返回一级列表。
+</pre></div>
+</div>
+</td>
+<td><p class="first">列表语法和Markdown、reST类似。
+星号和列表语法冲突需缩进，不建议使用。</p>
+<ul class="last simple">
+<li>减号、加号开始列表。<ul>
+<li>列表层级和缩进有关。<ul>
+<li>和具体符号无关。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回一级列表。</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="5">有序列表</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>1. 数字和点开始有序列表。
+
+   1. 注意子列表的缩进位置。
+
+      1. 三级列表。
+      1. 编号会自动更正。
+
+   1. 二级列表，编号自动更正为2。
+
+2. 返回一级列表。
+</pre></div>
+</div>
+</td>
+<td><ol class="first last arabic simple">
+<li>数字和点开始有序列表。<ol class="arabic">
+<li>注意子列表的缩进位置。<ol class="arabic">
+<li>三级列表。</li>
+<li>编号会自动更正。</li>
+</ol>
+</li>
+<li>二级列表，编号自动更正为2。</li>
+</ol>
+</li>
+<li>返回一级列表。</li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>1. 数字和点是一种编号方式。
+
+   A. 大写字母编号。
+
+      a. 小写字母编号。
+
+2. 继续一级列表。
+
+   (I) 大写罗马编号。
+
+       i) 小写罗马编号。
+</pre></div>
+</div>
+</td>
+<td><ol class="first last arabic simple">
+<li>数字和点是一种编号方式。<ol class="upperalpha">
+<li>大写字母编号。<ol class="loweralpha">
+<li>小写字母编号。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>继续一级列表。<ol class="upperroman">
+<li>大写罗马编号。<ol class="lowerroman">
+<li>小写罗马编号。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre># 井号开始有序列表。
+# 有序列表自动编号。
+## 更多井号代表不同层级。
+### 三级列表。
+# 返回一级列表。
+</pre></div>
+</div>
+</td>
+<td><ol class="first last arabic simple">
+<li>井号开始有序列表。</li>
+<li>有序列表自动编号。<ol class="arabic">
+<li>更多井号代表不同层级。<ol class="arabic">
+<li>三级列表。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>返回一级列表。</li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first highlight-none"><div class="highlight"><pre>1. 和reST一样支持多种编号方式。
+a. 层级靠列表风格决定，而非缩进。
+A. 三级列表。
+b. 返回二级列表。
+i) 罗马数字列表。
+IX)  大写罗马。编号自动纠正。
+2. 返回一级列表。
+</pre></div>
+</div>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p>还可以用1到5个点开始有序列表，
+自动按数字、字母方式编号。如：</p>
+<div class="last highlight-none"><div class="highlight"><pre>. 数字一级列表。
+.. 字母二级列表。
+... 罗马数字三级列表。
+.... 大写字母四级列表。
+..... 大写罗马五级列表。
+</pre></div>
+</div>
+</div>
+</td>
+<td><ol class="first last arabic simple">
+<li>和reST一样支持多种编号方式。<ol class="loweralpha">
+<li>层级靠列表风格决定，而非缩进。<ol class="upperalpha">
+<li>三级列表。</li>
+</ol>
+</li>
+<li>返回二级列表。<ol class="lowerroman">
+<li>罗马数字列表。<ol class="upperroman" start="9">
+<li>大写罗马。编号自动纠正。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>返回一级列表。</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>1. 数字和点或右括号开始有序列表。
+
+   1) 缩进即为子列表。
+
+      1. 三级列表。
+      1. 编号会自动更正。
+
+   2) 二级列表。
+
+2. 返回一级列表。
+</pre></div>
+</div>
+</td>
+<td><ol class="first last arabic simple">
+<li>数字和点或右括号开始有序列表。<ol class="arabic">
+<li>缩进即为子列表。<ol class="arabic">
+<li>三级列表。</li>
+<li>编号会自动更正。</li>
+</ol>
+</li>
+<li>二级列表。</li>
+</ol>
+</li>
+<li>返回一级列表。</li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="4">列表续行、段落和代码块</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>1. 列表项可以折行，
+   对齐则自动续行。
+
+2. 列表项可包含多个段落。
+
+    空行开始的新段落必须缩进四个空格，
+    段落才属于列表项。
+
+3. 列表中的代码块要缩进8个空格。
+
+        $ printf "Hello, world.\n"
+</pre></div>
+</div>
+</td>
+<td><ol class="first last arabic">
+<li><p class="first">列表项可以折行，
+对齐则自动续行。</p>
+</li>
+<li><p class="first">列表项可包含多个段落。</p>
+<p>空行开始的新段落必须缩进四个空格，
+段落才属于列表项。</p>
+</li>
+<li><p class="first">列表中的代码块要缩进8个空格。</p>
+<div class="highlight-none"><div class="highlight"><pre>$ printf "Hello, world.\n"
+</pre></div>
+</div>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>1. 列表项可以折行，
+   对齐则自动续行。
+
+2. 列表项可包含多个段落。
+
+   空行开始的新段落，
+   新段落要和列表项内容对齐。
+
+3. 列表下的代码段注意对齐即可。
+
+   ::
+
+     $ printf "Hello, world.\n"
+</pre></div>
+</div>
+</td>
+<td><ol class="first last arabic">
+<li><p class="first">列表项可以折行，
+对齐则自动续行。</p>
+</li>
+<li><p class="first">列表项可包含多个段落。</p>
+<p>空行开始的新段落，
+新段落要和列表项内容对齐。</p>
+</li>
+<li><p class="first">列表下的代码段注意对齐即可。</p>
+<div class="highlight-none"><div class="highlight"><pre>$ printf "Hello, world.\n"
+</pre></div>
+</div>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>1. 列表项可以折行，
+   对齐则自动续行。
+
+2. 列表项可包含多个段落。
++
+加号代表本段落属于列表。
++
+--
+两个减号包裹的块作为一整体
+属于列表。
+
+其中分段无需再使用加号。
+--
+
+3. 注意列表项内代码段前空行用加号替换。
++
+--------
+$ printf "Hello, world.\n"
+--------
+</pre></div>
+</div>
+</td>
+<td><ol class="first last arabic">
+<li><p class="first">列表项可以折行，
+对齐则自动续行。</p>
+</li>
+<li><p class="first">列表项可包含多个段落。</p>
+<p>加号代表本段落属于列表。</p>
+<p>两个减号包裹的块作为一整体
+属于列表。</p>
+<p>其中分段无需再使用加号。</p>
+</li>
+<li><p class="first">注意列表项内代码段前空行用加号替换。</p>
+<div class="highlight-none"><div class="highlight"><pre>$ printf "Hello, world.\n"
+</pre></div>
+</div>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>1. 列表项可以折行，
+   对齐则自动续行。
+
+2. 列表项可包含多个段落。
+
+   空行开始的新段落，
+   新段落和列表项内容对齐即可。
+
+3. 列表下的代码段注意缩进。
+
+   #+BEGIN_SRC bash
+     $ printf "Hello, world.\n"
+   #+END_SRC
+</pre></div>
+</div>
+</td>
+<td><ol class="first last arabic">
+<li><p class="first">列表项可以折行，
+对齐则自动续行。</p>
+</li>
+<li><p class="first">列表项可包含多个段落。</p>
+<p>空行开始的新段落，
+新段落和列表项内容对齐即可。</p>
+</li>
+<li><p class="first">列表下的代码段注意缩进。</p>
+<div class="highlight-none"><div class="highlight"><pre>$ printf "Hello, world.\n"
+</pre></div>
+</div>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="4">定义</td>
+<td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>git
+  Simple and beautiful.
+
+hg
+  Another DVCS.
+
+subversion
+  VCS with many constrains.
+
+  Why not Git?
+</pre></div>
+</div>
+</td>
+<td><dl class="first last docutils">
+<dt>git</dt>
+<dd>Simple and beautiful.</dd>
+<dt>hg</dt>
+<dd>Another DVCS.</dd>
+<dt>subversion</dt>
+<dd><p class="first">VCS with many constrains.</p>
+<p class="last">Why not Git?</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- git := Simple and beautiful.
+- hg := Another DVCS.
+- subversion :=
+VCS with many constrains.
+
+Why not Git? =:
+</pre></div>
+</div>
+</td>
+<td><dl class="first last docutils">
+<dt>git</dt>
+<dd>Simple and beautiful.</dd>
+<dt>hg</dt>
+<dd>Another DVCS.</dd>
+<dt>subversion</dt>
+<dd><p class="first">VCS with many constrains.</p>
+<p class="last">Why not Git?</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>git ::
+    Simple and beautiful.
+hg :: Another DVCS.
+subversion :: VCS with many constrains.
+              +
+              Why not Git?
+</pre></div>
+</div>
+</td>
+<td><dl class="first last docutils">
+<dt>git</dt>
+<dd>Simple and beautiful.</dd>
+<dt>hg</dt>
+<dd>Another DVCS.</dd>
+<dt>subversion</dt>
+<dd><p class="first">VCS with many constrains.</p>
+<p class="last">Why not Git?</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- git :: Simple and beautiful.
+- hg :: Another DVCS.
+- subversion :: VCS with many constrains.
+
+                Why not Git?
+</pre></div>
+</div>
+</td>
+<td><dl class="first last docutils">
+<dt>git</dt>
+<dd>Simple and beautiful.</dd>
+<dt>hg</dt>
+<dd>Another DVCS.</dd>
+<dt>subversion</dt>
+<dd><p class="first">VCS with many constrains.</p>
+<p class="last">Why not Git?</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td colspan="2" rowspan="4">分隔线</td>
+<td>md</td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>三条或更多短线（或星号、下划线）\
+显示为分隔线。
+
+---
+</pre></div>
+</div>
+</td>
+<td>输出略。</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>四条短线或以上显示为分隔线。
+
+----
+</pre></div>
+</div>
+</td>
+<td>输出略。</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>三个或更多的单引号作为分割线。
+
+'''
+</pre></div>
+</div>
+</td>
+<td>输出略。</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>五条短线或以上显示为分隔线。
+
+-----
+</pre></div>
+</div>
+</td>
+<td>输出略。</td>
+</tr>
+<tr class="row-odd"><td rowspan="28">字体</td>
+<td rowspan="5">粗体和斜体</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>这些都是 **粗体** 或 __粗体__ ，
+这写都是 *斜体* 或 _斜体_ 。
+</pre></div>
+</div>
+</td>
+<td>这些都是 <strong>粗体</strong> 或 <strong>粗体</strong> ，
+这些都是 <em>斜体</em> 或 <em>斜体</em> 。</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>这是 **粗体** ，这是 *斜体* 。
+
+不留白的\ **粗体**\ 和\ *斜体*\ 效果。
+</pre></div>
+</div>
+</td>
+<td><p class="first">这是 <strong>粗体</strong> ，这是 <em>斜体</em> 。</p>
+<p class="last">不留白的<strong>粗体</strong>和<em>斜体</em>效果。</p>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>这些都是 *粗体* 或 **粗体** ，
+这些都是 _斜体_ 或 __斜体__ 。
+
+不留白的[*粗体*]和[_斜体_]效果。
+</pre></div>
+</div>
+</td>
+<td><p class="first">这些都是 <strong>粗体</strong> 或 <strong>粗体</strong> ，
+这些都是 <em>斜体</em> 或 <em>斜体</em> 。</p>
+<p class="last">不留白的<strong>粗体</strong>和<em>斜体</em>效果。</p>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>这是 *粗体* ，
+这是 _斜体_ 或 '斜体' 。
+
+不留白的**粗体**和__斜体__效果。
+</pre></div>
+</div>
+</td>
+<td><p class="first">这是 <strong>粗体</strong> ，
+这是 <em>斜体</em> 或 <em>斜体</em> 。</p>
+<p class="last">不留白的<strong>粗体</strong>和<em>斜体</em>效果。</p>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>这是 *粗体* ，这是 /斜体/ 。
+</pre></div>
+</div>
+</td>
+<td>这是 <strong>粗体</strong> ，这是 <em>斜体</em> 。</td>
+</tr>
+<tr class="row-even"><td rowspan="5">删除线</td>
+<td>gfm</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>~~删除线~~ 效果
+</pre></div>
+</div>
+</td>
+<td><span class="strike">删除线</span> 效果</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>.. role:: strike
+   :class: strike
+
+:strike:`删除线` 效果
+
+不留白的\ :strike:`删除线`\ 效果
+</pre></div>
+</div>
+</td>
+<td><p class="first"><span class="strike">删除线</span> 效果</p>
+<p class="last">不留白的<span class="strike">删除线</span>效果</p>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>-删除线- 效果
+
+不留白的[-删除线-]效果
+</pre></div>
+</div>
+</td>
+<td><p class="first"><span class="strike">删除线</span> 效果</p>
+<p class="last">不留白的<span class="strike">删除线</span>效果</p>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>[line-through]#删除线# 效果
+
+不留白的[line-through]##删除线##效果
+</pre></div>
+</div>
+</td>
+<td><p class="first"><span class="strike">删除线</span> 效果</p>
+<p class="last">不留白的<span class="strike">删除线</span>效果</p>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>+删除线+ 效果
+</pre></div>
+</div>
+</td>
+<td><span class="strike">删除线</span> 效果</td>
+</tr>
+<tr class="row-odd"><td rowspan="5">下划线</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>&lt;u&gt;下划线&lt;/u&gt; 效果
+</pre></div>
+</div>
+</td>
+<td><span class="underline">下划线</span> 效果</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>.. role:: ul
+   :class: underline
+
+:ul:`下划线` 效果
+
+不留白的\ :ul:`下划线`\ 效果
+</pre></div>
+</div>
+</td>
+<td><p class="first"><span class="underline">下划线</span> 效果</p>
+<p class="last">不留白的<span class="underline">下划线</span>效果</p>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>+下划线+ 效果
+
+不留白的[+下划线+]效果
+</pre></div>
+</div>
+</td>
+<td><p class="first"><span class="underline">下划线</span> 效果</p>
+<p class="last">不留白的<span class="underline">下划线</span>效果</p>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>[underline]#下划线# 效果
+
+不留白的[underline]##下划线##效果
+</pre></div>
+</div>
+</td>
+<td><p class="first"><span class="underline">下划线</span> 效果</p>
+<p class="last">不留白的<span class="underline">下划线</span>效果</p>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>_下划线_ 效果
+</pre></div>
+</div>
+</td>
+<td><span class="underline">下划线</span> 效果</td>
+</tr>
+<tr class="row-even"><td rowspan="5">上标、下标</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- Water: H&lt;sub&gt;2&lt;/sub&gt;O
+- E = mc&lt;sup&gt;2&lt;/sup&gt;
+</pre></div>
+</div>
+</td>
+<td><ul class="first simple">
+<li>Water: H<sub>2</sub>O</li>
+<li>E = mc<sup>2</sup></li>
+</ul>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">通过直接嵌入HTML代码实现。</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- Water: H\ :sub:`2`\ O
+- E = mc\ :sup:`2`
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>Water: H<sub>2</sub>O</li>
+<li>E = mc<sup>2</sup></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- Water: H[~2~]O
+- E = mc[^2^]
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>Water: H<sub>2</sub>O</li>
+<li>E = mc<sup>2</sup></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- Water: H~2~O
+- E = mc^2^
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>Water: H<sub>2</sub>O</li>
+<li>E = mc<sup>2</sup></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- Water: H_2 O
+- E = mc^2
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>Water: H<sub>2</sub> O</li>
+<li>E = mc<sup>2</sup></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="5">等宽字体</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>行内反引号嵌入代码，如: `git status` 。
+</pre></div>
+</div>
+</td>
+<td>行内反引号嵌入代码，如: <tt class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></tt> 。</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>两个连续反引号嵌入代码，如: ``git status`` 。
+</pre></div>
+</div>
+</td>
+<td><p class="first">两个连续反引号嵌入代码，如: <tt class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></tt> 。</p>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">相当于 :literal:`git status` 。
+只用一个反引号则相当于 :title-reference:`引言` 。</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>行内用字符@嵌入代码，如: @git status@ 。
+</pre></div>
+</div>
+</td>
+<td>行内用字符@嵌入代码，如: <tt class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></tt> 。</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>行内用加号或反引号标识等宽字体，如:
+
+- 命令: +git clone+ 。
+- 命令: `git init` 。
+</pre></div>
+</div>
+</td>
+<td><p class="first">行内用加号或反引号标识等宽字体，如:</p>
+<ul class="last simple">
+<li>命令: <tt class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span></tt> 。</li>
+<li>命令: <tt class="docutils literal"><span class="pre">git</span> <span class="pre">init</span></tt> 。</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>行内用字符=或~嵌入代码，如:
+=git status= 和 ~git st~ 。
+</pre></div>
+</div>
+</td>
+<td>行内用字符=或~嵌入代码，如:
+<tt class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></tt> 和 <tt class="docutils literal"><span class="pre">git</span> <span class="pre">st</span></tt> 。</td>
+</tr>
+<tr class="row-even"><td rowspan="2">引言</td>
+<td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>`Got GitHub` by Jiang Xin.
+</pre></div>
+</div>
+</td>
+<td><cite>Got GitHub</cite> by Jiang Xin.</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>??Got GitHub?? by Jiang Xin.
+</pre></div>
+</div>
+</td>
+<td><cite>Got GitHub</cite> by Jiang Xin.</td>
+</tr>
+<tr class="row-even"><td>清除标记空白</td>
+<td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>标记符号前后空白\
+用\ **反斜线**\ 消除
+</pre></div>
+</div>
+</td>
+<td>标记符号前后空白用<strong>反斜线</strong>消除</td>
+</tr>
+<tr class="row-odd"><td rowspan="16">链接</td>
+<td>URL自动链接</td>
+<td>gfm</td>
+<td>rst</td>
+<td> </td>
+<td>asc</td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- 网址 http://github.com/
+- 邮件 me@foo.bar
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>网址 <a class="reference external" href="http://github.com/">http://github.com/</a></li>
+<li>邮件 <a class="reference external" href="mailto:me%40foo.bar">me<span>@</span>foo<span>.</span>bar</a></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="5">文字链接</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- 访问 [Google](http://google.com "Search")
+- 访问 [GitHub][1]
+- 访问 [WorldHello][]
+
+ [1]: http://github.com "Git host"
+ [worldhello]: http://www.worldhello.net
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>访问 <a class="reference external" href="http://google.com">Google</a></li>
+<li>访问 <a class="reference external" href="http://github.com">GitHub</a></li>
+<li>访问 <a class="reference external" href="http://www.worldhello.net">WorldHello</a></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- 访问 `Google &lt;http://google.com/&gt;`_ 。
+- 上面已定义，直接引用 google_ 链接。
+- 链接地址在后面定义，如： GitHub_ 。
+- 反引号括起多个单词的链接。如 `my blog`_ 。
+
+.. _GitHub: http://github.com
+.. _my blog: http://www.worldhello.net
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>访问 <a class="reference external" href="http://google.com/">Google</a>。</li>
+<li>上面已定义，直接引用 <a class="reference external" href="http://google.com/">google</a> 链接。</li>
+<li>链接地址在后面定义，如： <a class="reference external" href="http://github.com">GitHub</a>。</li>
+<li>反引号括起多个单词的链接。如 <a class="reference external" href="http://www.worldhello.net">my blog</a>。</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- 访问 "Google (Search)":https://google.com
+- 访问 "GitHub (Git host)":github
+- 访问 "WorldHello":wh
+
+[github]http://github.com
+[wh]http://www.worldhello.net
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>访问 <a class="reference external" href="https://google.com">Google</a></li>
+<li>访问 <a class="reference external" href="http://github.com">GitHub</a></li>
+<li>访问 <a class="reference external" href="http://www.worldhello.net">WorldHello</a></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- 访问 http://google.com[Google]
+- 访问 link:/index.html[首页]
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>访问 <a class="reference external" href="http://google.com">Google</a></li>
+<li>访问 <a class="reference external" href="/index.html">首页</a></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- 访问 [[http://google.com][Google]]
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>访问 <a class="reference external" href="http://google.com">Google</a></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="5">内部跳转</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>&lt;a name="md-anchor" id="md-anchor"&gt;&lt;/a&gt;
+
+跳转至 [文内链接](#md-anchor) 。
+</pre></div>
+</div>
+</td>
+<td><p class="first last" id="md-anchor">跳转至 <a class="reference external" href="#md-anchor">文内链接</a> 。</p>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>.. _fig1:
+
+.. figure:: /images/github.png
+
+   内部跳转图例
+
+上面定义的位置，可以：
+
+- 通过 fig1_ 跳转。
+- 或者 `点击这里 &lt;#fig1&gt;`__ 跳转。
+- 或者参见 :ref:`fig1`\ 。
+</pre></div>
+</div>
+</td>
+<td><div class="first figure" id="fig1">
+<img alt="../images/github.png" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,">
+<p class="caption">内部跳转图例</p>
+</div>
+<p>上面定义的位置，可以：</p>
+<ul class="last simple">
+<li>通过 <a class="reference internal" href="#fig1">fig1</a> 跳转。</li>
+<li>或者 <a class="reference external" href="#fig1">点击这里</a> 跳转。</li>
+<li>或者参见 <a class="reference internal" href="#fig1"><em>内部跳转图例</em></a>。</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>&lt;a name="ttl-anchor" id="ttl-anchor"&gt;&lt;/a&gt;
+
+跳转至 "文内链接":#ttl-anchor 。
+</pre></div>
+</div>
+</td>
+<td><p class="first last" id="ttl-anchor">跳转至 <a class="reference external" href="#ttl-anchor">文内链接</a> 。</p>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>两种方式在这儿定义内部链接。
+
+[[alink1,链接标题1]]
+anchor:alink2[链接标题2]
+
+指向位置：
+
+- 跳转至 &lt;&lt;alink1,内部链接1&gt;&gt;
+- 跳转至 xref:alink2[]
+</pre></div>
+</div>
+</td>
+<td><p class="first">两种方式在这儿定义内部链接。</p>
+<p id="alink2"><span id="alink1"></span>指向位置：</p>
+<ul class="last simple">
+<li>跳转至 <a class="reference external" href="#alink1">内部链接1</a></li>
+<li>跳转至 <a class="reference external" href="#alink2">链接标题2</a></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre># &lt;&lt;org-anchor&gt;&gt;
+
+跳转至 [[#org-anchor][文内链接]]
+</pre></div>
+</div>
+</td>
+<td><p class="first last" id="org-anchor">跳转至 <a class="reference external" href="#org-anchor">文内链接</a> 。</p>
+</td>
+</tr>
+<tr class="row-even"><td>GitHub提交和问题链接</td>
+<td>gfm</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>指向同一提交的链接：
+
+- 提交ID（SHA）: cea00609ca8...
+- 用户@提交ID: mojombo@cea00609ca8...
+- 用户名/项目名@提交ID:
+  mojombo/god@cea00609ca8...
+
+指向同一Issue的链接：
+
+- Issue编号: #1
+- 用户名及Issue编号: mojombo#1
+- 用户名/项目名及Issue编号:
+  mojombo/god#1
+</pre></div>
+</div>
+</td>
+<td><p class="first">指向同一提交的链接<a class="footnote-reference" href="#id49" id="id16">[19]</a>：</p>
+<ul class="simple">
+<li>提交ID（SHA）: <span class="underline">cea00609ca8...</span></li>
+<li>用户@提交ID: <span class="underline">mojombo@cea00609ca8...</span></li>
+<li>用户名/项目名@提交ID:
+<span class="underline">mojombo/god@cea00609ca8...</span></li>
+</ul>
+<p>指向同一Issue的链接<a class="footnote-reference" href="#id50" id="id17">[20]</a>：</p>
+<ul class="last simple">
+<li>Issue编号: <span class="underline">#1</span></li>
+<li>用户名及Issue编号: <span class="underline">mojombo#1</span></li>
+<li>用户名/项目名及Issue编号:
+<span class="underline">mojombo/god#1</span></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="4">脚注</td>
+<td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>reST脚注的多种表示法：
+
+- 脚注即可以手动分配数字 [1]_ ，
+  也可以使用井号自动分配 [#]_ 。
+
+- 自动分配脚注 [#label]_ 也可以用
+  添加标签形式 [#label]_ 多次引用。
+
+- 还支持用星号嵌入符号式脚注，
+  如这个 [*]_ 和 这个 [*]_ 。
+
+- 使用单词做标识亦可 [CIT2012]_ 。
+
+
+.. [1] 数字编号脚注。
+.. [#] 井号自动编号。
+.. [#label] 井号添加标签以便多次引用。
+.. [*] 星号自动用符号做脚注标记。
+.. [*] 星号自动用符号做脚注标记。
+.. [CIT2012] 单词或其他规定格式。
+</pre></div>
+</div>
+</td>
+<td><p class="first">reST脚注的多种表示法：</p>
+<ul class="simple">
+<li>脚注即可以手动分配数字<a class="footnote-reference" href="#id25" id="id18">[1]</a>，
+也可以使用井号自动分配<a class="footnote-reference" href="#id26" id="id19">[2]</a>。</li>
+<li>自动分配脚注<a class="footnote-reference" href="#label" id="id20">[3]</a>也可以用添加标签形式<a class="footnote-reference" href="#label" id="id21">[3]</a>多次引用。</li>
+<li>还支持用星号嵌入符号式脚注，
+如这个<a class="footnote-reference" href="#id27" id="id22">[*]</a>和 这个<a class="footnote-reference" href="#id28" id="id23">[†]</a>。</li>
+<li>使用单词做标识亦可<a class="reference internal" href="#cit2012">[CIT2012]</a>。</li>
+</ul>
+<table class="docutils footnote" frame="void" id="id25" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id18">[1]</a></td><td>数字编号脚注。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id26" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id19">[2]</a></td><td>井号自动编号。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="label" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label">[3]</td><td><em>(<a class="fn-backref" href="#id20">1</a>, <a class="fn-backref" href="#id21">2</a>)</em> 井号添加标签以便多次引用。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id27" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id22">[*]</a></td><td>星号自动用符号做脚注标记。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id28" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id23">[†]</a></td><td>星号自动用符号做脚注标记。</td></tr>
+</tbody>
+</table>
+<table class="last docutils citation" frame="void" id="cit2012" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id24">[CIT2012]</a></td><td>单词或其他规定格式。</td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>Textile是Redmine [4] 内置的标记语言。
+
+fn4. http://goo.gl/rGyvs
+</pre></div>
+</div>
+</td>
+<td><p class="first">Textile是Redmine <a class="footnote-reference" href="#id30" id="id29">[4]</a> 内置的标记语言。</p>
+<table class="last docutils footnote" frame="void" id="id30" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id29">[4]</a></td><td><a class="reference external" href="http://goo.gl/rGyvs">http://goo.gl/rGyvs</a></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- 内联方式 footnote:[此处定义] 定义的脚注。
+- 定义脚注时可用一个ID标记
+  footnoteref:[note6, 可多次引用] 。
+- 引用已定义的脚注 footnoteref:[note6] 。
+</pre></div>
+</div>
+</td>
+<td><ul class="first simple">
+<li>内联方式 <a class="footnote-reference" href="#id34" id="id31">[5]</a> 定义的脚注。</li>
+<li>定义脚注时可用一个ID标记 <a class="footnote-reference" href="#id35" id="id32">[6]</a> 。</li>
+<li>引用已定义的脚注 <a class="footnote-reference" href="#id35" id="id33">[6]</a> 。</li>
+</ul>
+<table class="docutils footnote" frame="void" id="id34" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id31">[5]</a></td><td>此处定义</td></tr>
+</tbody>
+</table>
+<table class="last docutils footnote" frame="void" id="id35" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label">[6]</td><td><em>(<a class="fn-backref" href="#id32">1</a>, <a class="fn-backref" href="#id33">2</a>)</em> 可多次引用</td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>Twitter widget in Org homepage[fn:org]
+cannot be accessed in Mainland China, which
+caused the homepage load very slowly. &gt;:[
+
+[fn:org] The link is: http://orgmode.org
+</pre></div>
+</div>
+</td>
+<td><p class="first">Twitter widget in Org homepage <a class="footnote-reference" href="#id37" id="id36">[7]</a>
+cannot be accessed in Mainland China, which
+caused the homepage load very slowly. &gt;:[</p>
+<table class="last docutils footnote" frame="void" id="id37" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id36">[7]</a></td><td>The link is: <a class="reference external" href="http://orgmode.org">http://orgmode.org</a></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td colspan="2" rowspan="5">图片</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>![GitHub](/images/github.png "Logo")
+
+GitHub Logo: ![GitHub][logo]
+
+[logo]: /images/github.png "Logo"
+</pre></div>
+</div>
+</td>
+<td><img alt="../images/github.png" class="first" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,">
+<p class="last">GitHub Logo: <img alt="logo" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,"></p>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>.. figure:: /images/github.png
+   :width: 32
+
+   图：GitHub Octocat
+
+- GitHub Logo: |octocat|
+- 带链接的图片：
+  |imglink|_
+- 下图向右浮动。
+   .. image:: /images/github.png
+      :align: right
+
+.. |octocat| image:: /images/github.png
+.. |imglink| image:: /images/github.png
+.. _imglink: https://github.com/
+</pre></div>
+</div>
+</td>
+<td><div class="first figure">
+<img alt="../images/github.png" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64," style="width: 32px;">
+<p class="caption">图：GitHub Octocat</p>
+</div>
+<ul class="last">
+<li><p class="first">GitHub Logo: <img alt="octocat" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,"></p>
+</li>
+<li><p class="first">带链接的图片：
+<a class="reference external" href="https://github.com/"><img alt="imglink" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,"></a></p>
+</li>
+<li><dl class="first docutils">
+<dt>下图向右浮动。</dt>
+<dd><img alt="../images/github.png" class="first last align-right" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,">
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- GitHub Logo: !/images/github.png(Logo)!
+- 带链接的图片：
+  !/images/github.png!:https://github.com/
+- 下图向右浮动。
+  !&gt;/images/github.png!
+</pre></div>
+</div>
+</td>
+<td><ul class="first last">
+<li><p class="first">GitHub Logo: <img alt="icon" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,"></p>
+</li>
+<li><p class="first">带链接的图片：
+<a class="reference external" href="https://github.com/"><img alt="imglink2" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,"></a></p>
+</li>
+<li><dl class="first docutils">
+<dt>下图向右浮动。</dt>
+<dd><img alt="../images/github.png" class="first last align-right" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,">
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>.GitHub Octocat
+image::/images/github.png["Logo",width=32]
+
+- GitHub Logo:
+  image:/images/github.png["Logo"]
+</pre></div>
+</div>
+</td>
+<td><div class="first figure">
+<img alt="../images/github.png" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64," style="width: 32px;">
+<p class="caption">图：GitHub Octocat</p>
+</div>
+<ul class="last simple">
+<li>GitHub Logo: <img alt="ascimg" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,"></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>- GitHub Logo: [[file:/images/github.png]]
+- 带链接的图片：
+  [[https://github.com/][file:/images/...]]
+</pre></div>
+</div>
+</td>
+<td><ul class="first last simple">
+<li>GitHub Logo: <img alt="orgimg" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,"></li>
+<li>带链接的图片：
+<a class="reference external" href="https://github.com/"><img alt="orgimglink" data-savepage-src="../images/github.png" src="data:image/png;resource=16;base64,"></a></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td colspan="2" rowspan="5">表格</td>
+<td>gfm</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>head1 | head2  | head2
+------|:------:|------:
+left  | center | right
+left  | center | right
+</pre></div>
+</div>
+</td>
+<td><table class="classic first last docutils" border="1">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">head1</th>
+<th class="head">head2</th>
+<th class="head">head3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>left</td>
+<td>center</td>
+<td>right</td>
+</tr>
+<tr class="row-odd"><td>left</td>
+<td>center</td>
+<td>right</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>.. table:: 示例表格
+   :class: classic
+
+   +---------+--------+--------+
+   | head1   | head2  | head3  |
+   +=========+========+========+
+   |         | cell   | cell   |
+   | rowspan +--------+--------+
+   |         | * colspan       |
+   |         | * another line  |
+   +---------+-----------------+
+</pre></div>
+</div>
+</td>
+<td><table class="classic first last docutils" border="1">
+<caption>示例表格</caption>
+<colgroup>
+<col width="36%">
+<col width="32%">
+<col width="32%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">head1</th>
+<th class="head">head2</th>
+<th class="head">head3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">rowspan</td>
+<td>cell</td>
+<td>cell</td>
+</tr>
+<tr class="row-odd"><td colspan="2"><ul class="first last simple">
+<li>colspan</li>
+<li>another line</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>|_. head1 |_. head2 |_. head3 |
+|/3. rowspan | cell  | cell |
+|\2. colspan |
+| cell | cell |
+</pre></div>
+</div>
+</td>
+<td><table class="classic first last docutils" border="1">
+<caption>示例表格</caption>
+<colgroup>
+<col width="36%">
+<col width="32%">
+<col width="32%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">head1</th>
+<th class="head">head2</th>
+<th class="head">head3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="3">rowspan</td>
+<td>cell</td>
+<td>cell</td>
+</tr>
+<tr class="row-odd"><td colspan="2">colspan</td>
+</tr>
+<tr class="row-even"><td colspan="2">cell   | cell</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>[width="50%"]
+|============================
+|1 |2 |3 |4
+|5 2.2+|6 .3+|7
+|8
+|9 2+|10
+|============================
+</pre></div>
+</div>
+</td>
+<td><table class="classic first last docutils" border="1">
+<colgroup>
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td colspan="2" rowspan="2">6</td>
+<td rowspan="3">7</td>
+</tr>
+<tr class="row-odd"><td>8</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td colspan="2">10</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>#+CAPTION: 示例表格
+#+LABEL: tblref
+   | head1 | head2 | head3 |
+   |-------+-------+-------|
+   | cell  | cell  | cell  |
+   | cell  | cell  | cell  |
+</pre></div>
+</div>
+</td>
+<td><table class="classic first last docutils" border="1">
+<caption>示例表格</caption>
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">head1</th>
+<th class="head">head2</th>
+<th class="head">head3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>cell</td>
+<td>cell</td>
+<td>cell</td>
+</tr>
+<tr class="row-odd"><td>cell</td>
+<td>cell</td>
+<td>cell</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="7">其他</td>
+<td>混用HTML</td>
+<td>md</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>&lt;div style="background:#bbb;"&gt;
+  HTML块中不能混用 **标记语法**
+&lt;/div&gt;
+</pre></div>
+</div>
+</td>
+<td>输出略。</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>&lt;div style="background:#bbb;"&gt;
+  HTML块中可以混用 **标记语法**
+&lt;/div&gt;
+</pre></div>
+</div>
+</td>
+<td>输出略。</td>
+</tr>
+<tr class="row-even"><td rowspan="2">转义</td>
+<td> </td>
+<td>rst</td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>反斜线作为转义字符，\
+禁止对后面 \*字符* 做语法解析。
+</pre></div>
+</div>
+</td>
+<td>反斜线作为转义字符，禁止对后面 *字符* 做语法解析。</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td>ttl</td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>用 notextile 标记的段落不进行语法解析。
+
+notextile. 不进行 *语法解析* 。
+</pre></div>
+</div>
+</td>
+<td><p class="first">用 notextile 标记的段落不进行语法解析。</p>
+<p class="last">不进行 *语法解析* 。</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="3">注释</td>
+<td> </td>
+<td>rst</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>.. 注释
+
+..
+   缩进内容也是注释
+</pre></div>
+</div>
+</td>
+<td>无输出。</td>
+</tr>
+<tr class="row-odd"><td> </td>
+<td> </td>
+<td> </td>
+<td>asc</td>
+<td> </td>
+<td><div class="first last highlight-none"><div class="highlight"><pre>/////////////////
+四个或更多的斜线包围起来的
+文字块是注释，被忽略。
+/////////////////
+</pre></div>
+</div>
+</td>
+<td>无输出。</td>
+</tr>
+<tr class="row-even"><td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>org</td>
+<td><div class="first last highlight-none"><div class="highlight"><pre># 行首井号是注释。
+
+  #+ 缩进行首用 ``#+`` 标记为注释。
+
+
+  #+BEGIN_COMMENT
+   块注释
+   ...
+  #+END_COMMENT
+</pre></div>
+</div>
+</td>
+<td>无输出。</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<ul class="last simple">
+<li>部分标记语言代号后添加了星标，代表该标记语言相应的语法实现稍有区别，或者GitHub的具体实现和标准有出入。</li>
+<li>为突出部分空格，使用符号 <tt class="docutils literal"><span class="pre">°</span></tt> 标记。</li>
+</ul>
+</div>
+<hr class="docutils">
+<table class="docutils footnote" frame="void" id="id38" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[8]</a></td><td>Markdown是在Ruby应用中广泛使用的标记语言，语法简洁并可混用HTML。标准的Markdown语法缺乏如表格等关键特性的支持，虽然不同的解析器都对其语法进行了扩展，但实现各有不同，造成一定的混乱。网址：<a class="reference external" href="http://daringfireball.net/projects/markdown/">http://daringfireball.net/projects/markdown/</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id39" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[9]</a></td><td>GitHub使用Redcarpet作为Markdown的解析工具，并添加了额外的语法扩展。网址：<a class="reference external" href="http://github.github.com/github-flavored-markdown/">http://github.github.com/github-flavored-markdown/</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id40" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[10]</a></td><td>reStructuredText可简写为reST或RST，是在Python中广泛使用的标记语言。reST的语法简洁严谨，本书就是使用Sphinx扩展的reST语法和工具撰写的。网址：<a class="reference external" href="http://docutils.sourceforge.net/rst.html">http://docutils.sourceforge.net/rst.html</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id41" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[11]</a></td><td>Textile是在Ruby应用中广泛使用的标记语言，例如Redmine就将Textile作为内置的标记语言。网址：<a class="reference external" href="http://redcloth.org/textile">http://redcloth.org/textile</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id42" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[12]</a></td><td>RDoc是内嵌于Ruby代码中用于维护软件文档的标记语言。网址：<a class="reference external" href="http://rdoc.sourceforge.net/doc/">http://rdoc.sourceforge.net/doc/</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id43" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[13]</a></td><td>POD是内嵌于Perl代码中用于维护软件文档的标记语言。网址：<a class="reference external" href="http://perldoc.perl.org/perlpod.html">http://perldoc.perl.org/perlpod.html</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id44" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id8">[14]</a></td><td>Org-mode是Emacs的一种编辑模式，除文档外还被广泛应用于维护TODO列表、项目计划等。网址：<a class="reference external" href="http://orgmode.org/org.html">http://orgmode.org/org.html</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id45" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id9">[15]</a></td><td>MediaWiki是著名的维基百科（WikiPedia）所使用的维基语言。网址：<a class="reference external" href="http://www.mediawiki.org/wiki/Help:Formatting">http://www.mediawiki.org/wiki/Help:Formatting</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id46" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id10">[16]</a></td><td>维基的实现有上百种，语法各不相同。Creole试图建立统一的维基语法标准。网址：<a class="reference external" href="http://www.wikicreole.org/">http://www.wikicreole.org/</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id47" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id11">[17]</a></td><td>DocBook是著名的用于文档撰写的标记语言，采用XML文件格式及大量的面向出版的格式标签，能够实现单一源文件出版（Single-Source Publishing），即一次撰写多种格式输出（Write once, publish many）。但复杂的XML标签给写作过程带来不小的负担。网址：<a class="reference external" href="http://www.docbook.org/">http://www.docbook.org/</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id48" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id12">[18]</a></td><td>AsciiDoc的轻量级标签和DocBook的XML标签语法有着清晰的对应关系，既解决了DocBook语言标签复杂、难读难写的问题，又可利用DocBook丰富的工具链实现单一源文件向多种格式的输出转换。网址：<a class="reference external" href="http://www.methods.co.nz/asciidoc">http://www.methods.co.nz/asciidoc</a>。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id49" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id16">[19]</a></td><td><a class="reference external" href="https://github.com/mojombo/god/commit/cea00609ca8441c82bc9760ae5eea7d7509d85b3">https://github.com/mojombo/god/commit/cea00609ca8441c82bc9760ae5eea7d7509d85b3</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id50" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id17">[20]</a></td><td><a class="reference external" href="https://github.com/mojombo/god/issues/1">https://github.com/mojombo/god/issues/1</a></td></tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录">索引</a></li>
+        <li class="right">
+          <a href="../06-side-projects/opensource.html" title="6.4.4. GitHub Open Source">上一页</a> |</li>
+        <li><a href="../index.html">GotGitHub</a> »</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" data-savepage-src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAYAAABjyArgAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAdnJLH8AAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAABt5JREFUaN7tWt9LHFcU3udSxVexEKG2WQWLtqSltCSB5A+wTy2FtJbS0ofQStKEpt3EJJiENKGymFoNqLVCKDFx/bXqrqu7uq77e2fXxLwayEP6Jv4Fp3xn9o53xp2d2VWJbLxwcfbeO9843z33O+eeOw4iqnY4HHRY974S4U/+h9c/TbOBGfItzlFgaZ4Ww4u0FAlROBam1USEYqkoxdNxSmYSlFKSlMqm1KokKakkKJGO8xiMXYmF+d5geJGxfIs+xsYzpuYmaWJ2nMa9HhqbfkyPpx5xfTQ5SqMTDyumSkRvk+sP+mhhOUChlSCFo8tMVjwdYwIzuTRlnyiUe5qltfU1evJMrbjOPc1xH8YklSTfg3uBEYoEGRPYRpI93jGNZBBcoSQ79ORGQmyB0WSUrRWkgdSuG1106vQpqqqu2rEU0Ia+rptdPDazluFJgUWvxFfYmheWF3QkT85N0PiMRyV5apvkS65L1NjYuOMZaEOf3Zc7CDgawZAFmVwQk8om2SrdPW6qq6uzrTsY677n5nshIbDmiEZyQJOLad8UTc6qJMOK/+y/R85Gp4Zz8uRJ6ujo4Ipr0Y4xPX09pi+FvoOCoxEMnYQsbJObYkts+6xNR15NTQ21t7fT1atXKRgMcsU12tAnj8W9K9EwpXMqybBkyIWqyXM0M+/VpOKfB8NUXV2t3tfWRhsbG2QsaEMfxmBsoZcaGhk8UDgawXBo0EvIAizXSC7IA5Gbm5tUrAwNDemIxuyCZEwYJg7PgOObD/lpbmFWlYrZCW0JYqLkInlj3TMEtvGFhMUZcdzd3fTl51/sCufFixcUi0a54toOjkYwli+cEjQXS1smt6WlpeAMmhVMAu6RLRmY0GQ8Y1sqVCu+3OnSLOXZ+rolwSjCcmQNxDXa3m9tpft9/Tpya2trqerNKrp4/mcdOcVw5P9nZHiY3j5Sr6t+n68ojo7gMEtDjB0aNFcm18pq7ZAMTYbjY6mIhSm4oloxtLixSbXeUiYRY4WjES8jVoHznXeZgBOffEo/fPc9t2H13bp5i68fjY7awhH/DyyW8T76mL79+hueJEEyJs8MR0cwW6+SYGkQDg1LXVEUKreAZCEXwAQ2QjhhxYEl1YqFAzEWLE8xQcYljyIcjfwyaLtw7jz9cuGiztqE5RpXSDEclK2tLRrqvc8Yf9y6o90zODDAba3N75ni6AiGPqZzaQ7FxEth1ndbhD6hIoTDChFavJgP29AHz2wsBXZFuoJ7jMTIOLA8ECtj4LeR5GI4ILihoYHJdDqdOj0Wk/ffy5cFcXQEY4emPFE4lhXWK0sDogXoDGYJVSbf2NedXzaiCCsGNrQYOz5ZJvaLYJkMEAtrE6TA4QkNtcLxer3U3NzM71mI4Ocbz60JhnPDEhabCHlJArhQvAsyPR5PwT75frHUgY0dH6Qokg/Z5kPzey4RcoEFYjmjwHKNjgo6bYWDiYCTi8diWht0XGDYkgjkE9bWc9oLyVYonFV9fT2LOQjHNZa/6BORBggXfYVkAtvqlE6H56mpqcnUyZlZrx3nhAJLFVqJKmQCBF35zUVH6t6yxBF6i9p17TrXpqNH+Xdf71/2nBxiX+QVxAvJy6GYJtvRa3kF4BmIiVcTqxrBndeuaGGRXYKtwit5KYMQEabB68OqS8UBhtH6fzx7VsOyDNNeJcHYcIhQzc5GQ2hdKRuNu7/f2bHRKBUnmUiy5aPKjrIYTskSAceH0A3XIFWWCGOfXYkAwQ8ePqjsrXIxJ1fMkdlxcmKGVSeX5WfJTg4ET/unaOTfEV3WCpMGHNwvb1qskjQgR07SvEqcHWGa2CIjtDIuc7MwDSSLdmMfCixaDtPiUpjmD/q1zBrnh6fH6NfLFZiuFBsNeZtsjGf3cqOxnN9oIHUpsmoibVlJpxsawZF44a1yKfmBcrfKcvK9YgmWkz2Dfw/sfbKnx83YSPbgWSJlKSfexclGJR0daQSjujpdWrryzFdndCSXkvSB1RdMV2YSdP3G9dfxdHn7R8e5nziMypaRcEcfxsgJ92MfHmNpQJztyud9X2uCUZEAx2YAJMuWXM6REchNZ1PU299r9zuCgpsM4xg7OGa/zZJJpf5PJWDsbGSSFfXQE5pc8qFnjzj0TNomtxARxmu7L2U2ScUmzs5ElYPhMOuAXMjH9iDN6tgeJxd8bI/vIzKJkmXBKl1Z6kSZ/S3nfzLLi5RNMJ9vfdBKnkkPh3CIkxXtw5Oc9OFJjtvkD0/Gpzx0/MTxsl5mN9JgJQllWN+uV4HDDjjIun33NgVCAenTqXzFp1OZBPdhTDnE7pcF71aDrXzCnhF8WHdRieiNQyL27+vK/wHmco75a99J1gAAAABJRU5ErkJggg=="></a>
+      <br>
+      全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.
+      <br>
+        © Copyright 2011, 蒋鑫。
+      最后更新于 2013/10/14。
+      使用 <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3 创建。
+
+    </div>
+  
+</body><div id="simple-translate-button" style="display: none;"></div><div id="simple-translate-panel" style="display: none;"><p>...</p></div></html>
